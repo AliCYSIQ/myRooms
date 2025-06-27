@@ -7,6 +7,7 @@ difficulty: {{Difficulty}}
 topics: {{Topics}}
 ---
 
+[[Template]]
 # {{Room Name}}
 
 **Room Link:** [TryHackMe • {{Room Name}}]({{Room Link}})  
