@@ -87,3 +87,34 @@ Again the payload looks similar to the path traversal, but the include function
 
 i do lab here and the ans was like this |^|
 
+**(by this task 4 end)**
+
+**#3.** In the first two cases, we checked the code for the web app, and then we knew how to exploit it. However, in this case, we are performing black box testing, in which we don't have the source code. In this case, errors are significant in understanding how the data is passed and processed into the web app.
+
+in this case you don't know the source code , we write some wrong input to see the error that occur and maybe give us some info **(this itself is vulnerability)** and by that you know the function they use for example :
+In this scenario, we have the following entry point: `http://webapp.thm/index.php?lang=EN`. If we enter an invalid input, such as THM, we get the following error
+
+```php
+Warning: include(languages/THM.php): failed to open stream: No such file or directory in /var/www/html/THM-4/index.php on line 12
+```
+
+The error message discloses significant information. By entering THM as input, an error message shows what the include function looks like: `include(languages/THM.php);`.
+The error message discloses significant information. By entering THM as input, an error message shows what the include function looks like: `include(languages/THM.php);`.
+
+If you look at the directory closely, we can tell the function includes files in the languages directory is adding .php at the end of the entry. Thus the valid input will be something as follows: `index.php?lang=EN`, where the file EN is located inside the given languages directory and named `EN.php`.
+
+Also, the error message disclosed another important piece of information about the full web application directory path which is `/var/www/html/THM-4/`.
+
+if we try to do this  `http://webapp.thm/index.php?lang=../../../../etc/passwd`
+this will be the response :
+```php
+Warning: include(languages/../../../../../etc/passwd.php): failed to open stream: No such file or directory in /var/www/html/THM-4/index.php on line 12
+```
+by this we know that there is a fuction that check for `.php` so we can use something call null-byte (i think this don't work any more in real-world)  and this is the null-byte **`%00`**
+Using null bytes is an injection technique where URL-encoded representation such as %00 or 0x00 in hex with user-supplied data to terminate strings. You could think of it as trying to trick the web app into disregarding whatever comes after the Null Byte.
+
+By adding the Null Byte at the end of the payload, we tell the include function to ignore anything after the null byte which may look like:
+
+`include("languages/../../../../../etc/passwd%00").".php");` which is equivalent to `include("languages/../../../../../etc/passwd");`
+
+**Note:** the %00 trick is fixed and not working with PHP 5.3.4 and above.
