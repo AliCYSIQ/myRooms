@@ -49,3 +49,41 @@ a/
 (by this task 3 end)
 
 ## Local File Inclusion (LFI)
+
+it occur due to developer's leak of security awareness with php using functions such as `require`  `include` `require_once` `include_once`
+
+**###1.** Suppose the web application provides two languages, and the user can select between the EN and AR
+------------------------------------------------------------------
+
+```php
+<?PHP 
+	include($_GET["lang"]);
+?>
+```
+
+The PHP code above uses a GET request via the URL parameter lang to include the file of the page. The call can be done by sending the following HTTP request as follows: `http://webapp.thm/index.php?lang=EN.php` to load the English page or `http://webapp.thm/index.php?lang=AR.php` to load the Arabic page, where EN.php and AR.php files exist in the same directory.
+
+Theoretically, we can access and display any readable file on the server from the code above if there isn't any input validation. Let's say we want to read the `/etc/passwd` file, which contains sensitive information about the users of the Linux operating system, we can try the following: `http://webapp.thm/get.php?file=/etc/passwd`
+
+In this case, it works because there isn't a directory specified in the include function and no input validation.
+
+and it ask for **lab** so i do it and it was just like path traversal, so the answer was just change the file parameter to /etc/passwd **like this** `http://webapp.thm/get.php?file=/etc/passwd`
+
+**###2.** Next, In the following code, the developer decided to specify the directory inside the function.
+------------------------------------------------------------------
+
+```php
+<?PHP 
+	include("languages/". $_GET['lang']); 
+?>
+```
+
+In the above code, the developer decided to use the include function to call PHP pages in the languages directory only via lang parameters.
+
+If there is no input validation, the attacker can manipulate the URL by replacing the lang input with other OS-sensitive files such as /etc/passwd.
+
+Again the payload looks similar to the path traversal, but the include function allows us to include any called files into the current page. The following will be the exploit:
+`http://webapp.thm/index.php?lang=../../../../etc/passwd`
+
+i do lab here and the ans was like this |^|
+
