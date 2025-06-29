@@ -12,3 +12,4 @@ This meets the conditions required for CSRF:
 - The action of changing the email address on a user's account is of interest to an attacker. Following this action, the attacker will typically be able to trigger a password reset and take full control of the user's account.
 - The application uses a session cookie to identify which user issued the request. There are no other tokens or mechanisms in place to track user sessions.
 - The attacker can easily determine the values of the request parameters that are needed to perform the action.
+(complete later)
