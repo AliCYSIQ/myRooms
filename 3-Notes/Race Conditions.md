@@ -41,4 +41,13 @@ now process,
 **process** is the program but when it running , this is what we called process.
 now,
 **Thread** in very simple way it the number of how much process could running in one time (multi-threading) like if you have 5 things and every run take 5 second and you use one thread to complete those five thing it will take **25 second** and if you use multi-threading it will take less time(that  on how much thread you have) for example you can running 5 threads you will need only 5 s to end this
-by this end thread and  multi-threading
+(by this end thread and  multi-threading)
+
+Race Conditions : real world analogy
+
+image there's bank have account have 100 $ and Two threads try to withdraw  in same time
+- the first thread try to withdraw 35$ 
+- the second thread try to withdraw 45$
+here the first thread set the account to 65$
+and the second one set it 55$ 
+We cannot be 100% certain which thread will get to update the remaining balance first; however, let’s assume that it is Thread 1. Thread 1 will set the remaining balance to $55. Afterwards, Thread 2 might set the remaining balance to $65 if not appropriately handled. (Thread 2 calculated that $65 should remain in the account after the withdrawal because the balance was $100 when Thread 2 checked it.) In other words, the user made two withdrawals, but the account balance was deducted only for the second one because Thread 2 said so!
