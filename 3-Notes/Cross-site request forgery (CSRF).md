@@ -1,4 +1,4 @@
-[[Portswigger]]
+[[Portswigger]] [[week1]]
 
 it vulnerability that allows the attacker to induce users to perform actions that they do not intend to perform, example:
 ![[ccrfEMAIL.svg]]

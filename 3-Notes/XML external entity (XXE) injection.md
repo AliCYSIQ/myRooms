@@ -1,4 +1,4 @@
-[[Portswigger]]
+[[Portswigger]] [[week1]]
 https://portswigger.net/web-security/xxe
 (read this)
 it is vulnerability  that let the attacker to interfere with application's processing XML , and sometimes allows the attacker to view server's system files  , and it can use to perform SSRF
@@ -14,7 +14,7 @@ There are various types of XXE attacks:
 
 let's start with the labs and how we can use it : 
 ## first lab
-in this this lab there's check product and it use XML to transmit data we can use it and make it transmit some files from  the server's system files , we can use this inject this code   `<!DOCTYPE test [ <!ENTITY xxe SYSTEM "file:///etc/passwd"> ]>`  in xml  to retrieve the file /etc/passwd and you can check for the most useful files here [[File Inclusion]] in Path Traversal section , anyway after the injection it will be like this ``
+in this this lab there's check product and it use XML to transmit data we can use it and make it transmit some files from  the server's system files , we can use this to inject this code   `<!DOCTYPE test [ <!ENTITY xxe SYSTEM "file:///etc/passwd"> ]>`  in xml  to retrieve the file /etc/passwd and you can check for the most useful files here [[File Inclusion]] in Path Traversal section , anyway after the injection it will be like this ``
 
 `<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE foo [ <!ENTITY xxe SYSTEM "file:///etc/passwd"> ]> <stockCheck><productId>&xxe;</productId></stockCheck>`
 

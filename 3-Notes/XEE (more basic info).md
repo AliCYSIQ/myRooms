@@ -1,4 +1,4 @@
-[[Room]]
+[[Room]] [[week1]]
 **XXE (XML External Entity) injection** is a type of security flaw that exploits vulnerabilities in an application's XML input. It occurs when an application accepts XML input that includes external entity references within the XML itself. Attackers can leverage this vulnerability to disclose local files, make server-side requests, or execute remote code.
 
 ### What is XML?

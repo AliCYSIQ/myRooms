@@ -1,4 +1,4 @@
-[[Portswigger]]
+[[Portswigger]] [[week1]]
 
 ## Insecure direct object references (IDOR)
 

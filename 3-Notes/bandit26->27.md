@@ -1,4 +1,4 @@
-[[bandit]]
+[[bandit]][[week1]]
 # when you in bandit 26
 
 write `ls` command then it will show and it will list this :
