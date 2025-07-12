@@ -11,4 +11,23 @@ what i knew from it , is:
    `name=admin'#&password=1234456` now this will let you log in without checking the password                  **if the username exist**
 
 # **Sequel**
+what i knew from it , is:
+1. MySQL server on p 3306
+2. when need to log-in , first `-h` if you use remote server , second `-u` for username and 
+   `-p` for password 
+3. some commmand you will use
+  ```MySQL
+  SHOW databases;           : Prints out the databases we can access.
+  USE {database_name};      : Set to use the database named {database_name}.
+  SHOW tables;              : Prints out the available tables inside the current
+database.
+SELECT * FROM {table_name}; : Prints out all the data from the table       {table_name}.
 
+ note *  here mean everything.
+
+```
+
+
+   # **Crocodile**
+   what i knew from it , is:
+   1. 
