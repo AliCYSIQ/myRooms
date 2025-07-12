@@ -1,4 +1,4 @@
-[[HTB-LABS]]
+[[HTB-LABS]] [[Week4]]
 
 # **Appointment**
 what i learned from it , is:
@@ -28,6 +28,11 @@ SELECT * FROM {table_name}; : Prints out all the data from the table       {tabl
 ```
 
 
-   # **Crocodile**
+# **Crocodile**
    what i learned from it , is:
-   1. 
+   1.  Nmap scanning switch employs the use of default scripts during a scan is -sC
+   2. most of this we already take it in [[Tier0 "AIOF"]] check it
+
+#  **Responder**
+what i learned from it , is:
+1. 

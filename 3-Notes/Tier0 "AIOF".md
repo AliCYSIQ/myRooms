@@ -1,4 +1,4 @@
-[[HTB-LABS]]
+[[HTB-LABS]] [[Week4]]
 # **Meow**
 what i knew from it , is:
 1. telnet is on p 23
