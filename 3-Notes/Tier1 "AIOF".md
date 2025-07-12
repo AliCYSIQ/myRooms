@@ -1,7 +1,7 @@
 [[HTB-LABS]]
 
 # **Appointment**
-what i knew from it , is:
+what i learned from it , is:
 1. sql stands for Structured Query Language
 2. the most fame bug is injection
 3. http on p 80, https on p 443
@@ -11,7 +11,7 @@ what i knew from it , is:
    `name=admin'#&password=1234456` now this will let you log in without checking the password                  **if the username exist**
 
 # **Sequel**
-what i knew from it , is:
+what i learned from it , is:
 1. MySQL server on p 3306
 2. when need to log-in , first `-h` if you use remote server , second `-u` for username and 
    `-p` for password 
@@ -29,5 +29,5 @@ SELECT * FROM {table_name}; : Prints out all the data from the table       {tabl
 
 
    # **Crocodile**
-   what i knew from it , is:
+   what i learned from it , is:
    1. 
