@@ -27,4 +27,12 @@ what i knew from it , is:
 
 # **Redeemer**
 what i knew from it , is:
-1. 
+1. the port of redis is 6379
+2. the type of database is in-memory database
+3. to interact with redis we will use this `redis-cli`
+4. and the full command is `redis-cli -h {ip}`
+5. and use `info` command inside `redis` to show all its info
+6. and use `select` command to choose one of the desired database in Redis
+7. and can use `keys *` to show all keys 
+8. use `get KEYNAME` to show the content , like cat
+
