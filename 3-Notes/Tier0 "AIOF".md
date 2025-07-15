@@ -21,7 +21,7 @@ what i knew from it , is:
 2. smb is on p 445
 3. you will find it with this name microsoft-ds
 4. you can log in with smbclient
-5. use this flag to list the dir `-L`
+5. use this flag to list the dir `-L` or services  
 6. you can use `get` command to download file from it
 
 ----------------------------
