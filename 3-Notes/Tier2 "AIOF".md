@@ -45,6 +45,6 @@ RECONFIGURE;
     `cd C:\Users\sql_svc\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\`
     there we will find this file `ConsoleHost_history.txt` and that have the history of this powershell then perform this command `type ConsoleHost_history.txt` and you will get the user of the admin and the password 
 
-11. after that you can use `psexec.py` from impacket to get in as admin and we use this `ali@Ali:~/impacket/impacket/examples$ sudo python3 psexec.py administrator@10.129.95.187` from that now we'r admin
+11. after that you can use `psexec.py` from impacket to get in as admin and we use this `ali@Ali:~/impacket/impacket/examples$ sudo python3 psexec.py administrator@10.129.95.187` from that now we'r admin then just go to the admin's Desktop and you will find the root.txt, and done
 12. we try to use winPEAS but idont know anything about it so we let it for letter ctf
 
