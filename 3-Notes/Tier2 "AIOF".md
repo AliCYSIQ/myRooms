@@ -22,4 +22,5 @@ Impacket is a collection of Python classes for working with network protocols. I
 ```
 
 5. we will use this script `mssqlclient.py` with this flaags `-windows-auth` :this flag is specified to use Windows Authentication .
-   `python3 mssqlclient.py ARCHETYPE/sql_svc@{TARGET_IP} -windows-auth`
+   `python3 mssqlclient.py ARCHETYPE/sql_svc@{TARGET_IP} -windows-auth` by then the password and by that you'r connect to sql server and type `help` for help
+6. 
