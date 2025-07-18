@@ -48,3 +48,7 @@ RECONFIGURE;
 11. after that you can use `psexec.py` from impacket to get in as admin and we use this `ali@Ali:~/impacket/impacket/examples$ sudo python3 psexec.py administrator@10.129.95.187` from that now we'r admin then just go to the admin's Desktop and you will find the root.txt, and done
 12. we try to use winPEAS but idont know anything about it so we let it for letter ctf
 
+
+# **Oopsie**
+this what i learn:
+1. 
