@@ -26,4 +26,5 @@ Impacket is a collection of Python classes for working with network protocols. I
    Here's a great article that can guide us further to our exploration journey with MSSQL Server:
    https://pentestmonkey.net/cheat-sheet/sql-injection/mssql-sql-injection-cheat-sheet
 
-6. and from this cheat-sheet i will use this `SELECT is_srvrolemember('sysadmin');`
+6. and from this cheat-sheet i will use this `SELECT is_srvrolemember('sysadmin');` continue using the cheat-sheet to see , from the command above the result is 1 and that mean it `true` which mean i'm admin or `sysadmin` .
+7. 
