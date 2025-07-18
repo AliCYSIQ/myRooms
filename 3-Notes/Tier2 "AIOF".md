@@ -44,5 +44,7 @@ RECONFIGURE;
 10. boom!!! we get reverse shell to the main server, now we went to Desktop to find the user.txt flag , then go to power-shell history 
     `cd C:\Users\sql_svc\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\`
     there we will find this file `ConsoleHost_history.txt` and that have the history of this powershell then perform this command `type ConsoleHost_history.txt` and you will get the user of the admin and the password 
-11. we try to use winPEAS but idont know anything about it so we let it for letter ctf
+
+11. after that you can use `psexec.py` from impacket to get in as admin and we use this `ali@Ali:~/impacket/impacket/examples$ sudo python3 psexec.py administrator@10.129.95.187` from that now we'r admin
+12. we try to use winPEAS but idont know anything about it so we let it for letter ctf
 
