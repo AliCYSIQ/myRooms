@@ -56,4 +56,8 @@ this what i learn:
 # **Vaccine**
 this what i learn:
 
-1. 
+1. the first task about ftb and other thing that we already cover .
+2. we found file called `backup.zip` , it can be cat because of the password so we will need to crack it , we will use tool called `john the ripper` but before that we need to convert `backup.zip` to hashes and to do that , there's tool called `zip2john` (it comes with `john the ripper`) and to to that we will use command 
+   `zip2john backup.zip > hashes` then use this command to crack it 
+   `john --wordlist=/usr/share/wordlist/rockyou.txt hashes` and to show the result we will use this command `john --show hashes`
+3. 
