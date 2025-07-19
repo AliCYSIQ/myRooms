@@ -60,4 +60,6 @@ this what i learn:
 2. we found file called `backup.zip` , it can be cat because of the password so we will need to crack it , we will use tool called `john the ripper` but before that we need to convert `backup.zip` to hashes and to do that , there's tool called `zip2john` (it comes with `john the ripper`) and to to that we will use command 
    `zip2john backup.zip > hashes` then use this command to crack it 
    `john --wordlist=/usr/share/wordlist/rockyou.txt hashes` and to show the result we will use this command `john --show hashes`
-3. now we found the user and the password inside index.php but the password is hash so we will use called `hashid` to know what kind of hash is this , after we do this , it show alot of hash types and will start with md5
+3. now we found the user and the password inside index.php but the password is hash so we will use called `hashid` to know what kind of hash is this , after we do this , it show alot of hash types and will start with md5 and in walkthrow they used hashcat but it dont work for me because it need gpu and i dont have one so i used john the ripper and this is the command i use 
+   `john --format=raw-md5 --wordlist=/usr/share/wordlists/rockyou.txt hash.txt` 
+4. 
