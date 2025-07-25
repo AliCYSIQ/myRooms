@@ -29,3 +29,14 @@ the attck result can be filter or analsis in different ways
 
 
 -------------
+
+
+
+
+# **info**
+## Request in browser
+
+Resend requests in Burp's browser:
+
+- **In original session** - Resend the request using the cookie header that appeared in the original request.
+- **In current session** - Resend the request using the cookies supplied by the browser.
