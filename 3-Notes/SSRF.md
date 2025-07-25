@@ -1,4 +1,4 @@
-[[Room]] [[week1]]
+[[Bug]]
 
 **What is an SSRF?**
 
@@ -16,6 +16,8 @@ A successful SSRF attack can result in any of the following: 
 - Access to customer/organisational data.
 - Ability to Scale to internal networks.
 - Reveal authentication tokens/credentials.
+
+
 
 (task 2 from AI)
 
