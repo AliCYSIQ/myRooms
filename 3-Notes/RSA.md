@@ -22,3 +22,21 @@ d=6
 3.6=18 mod 10 = 8 (also not equal 1)
 d=7
 3.7=21 mod 10 =1 (here it equal 1 that's mean d=7 and this true and we prove it  )
+
+and we can say this `3^−1 mod10=7`
+
+**Why You Need This in RSA**
+
+Because when you encrypt with:
+
+**`c=m^e mod  N`**
+
+
+You want to decrypt with:
+
+**`m=c^d mod  N`**
+
+But you don’t just **guess** ddd. You **calculate** it using:
+
+**`d=e^−1 mod  ϕ(N)`**
+
