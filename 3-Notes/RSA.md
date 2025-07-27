@@ -6,5 +6,11 @@ You can think of this as raising some number to a certain power (210=1024210=102
 
 RSA encryption is modular exponentiation of a message with an exponent ee and a modulus NN which is normally a product of two primes: N=p⋅qN=p⋅q.  
   
-Together, the exponent and modulus form an RSA "public key" (N,e)(N,e). The most common value for ee is `0x10001` or 6553765537.
+Together, the exponent and modulus form an RSA "public key" (N,e)(N,e). The most common value for `e`e is `0x10001` or 6553765537.
 
+RSA relies on the difficulty of the factorisation of the modulus N. If the prime factors can be deduced, then we can calculate the Euler totient of N and thus decrypt the ciphertext.
+and to count  Euler totient of N you should do this `((q-1) * (p-1))`
+so this mean ϕ(N)=`((q-1) * (p-1))`
+
+**Private key** The private key d is used to decrypt cipher-texts created with the corresponding public key it's also used to "sign" a message
+d≡e^-1 modϕ(N)
