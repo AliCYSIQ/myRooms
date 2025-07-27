@@ -13,4 +13,12 @@ and to count  Euler totient of N you should do this `((q-1) * (p-1))`
 so this mean ϕ(N)=`((q-1) * (p-1))`
 
 **Private key** The private key d is used to decrypt cipher-texts created with the corresponding public key it's also used to "sign" a message
-`d≡e^-1 modϕ(N)`
+`d≡e^-1 modϕ(N)` and this is mean `e⋅d modϕ(N)=1` let's say e = 3 and ϕ(N) = 10
+
+3 . d=q mod 10 = 1 (the manipulation of e and d will mod by ϕ(N) and the result should be 1 )
+so if we say that d = 3 it will be like this
+3.3 =9 mod 10 =9 (this is not equal 1 so this not the value of `d` )
+d=6
+3.6=18 mod 10 = 8 (also not equal 1)
+d=7
+3.7=21 mod 10 =1 (here it equal 1 that's mean d=7 and this true and we prove it  )
