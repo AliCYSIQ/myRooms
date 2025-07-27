@@ -13,4 +13,4 @@ and to count  Euler totient of N you should do this `((q-1) * (p-1))`
 so this mean ϕ(N)=`((q-1) * (p-1))`
 
 **Private key** The private key d is used to decrypt cipher-texts created with the corresponding public key it's also used to "sign" a message
-d≡e^-1 modϕ(N)
+`d≡e^-1 modϕ(N)`
