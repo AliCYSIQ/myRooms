@@ -64,3 +64,10 @@ Manually testing for XXE vulnerabilities generally involves:
 - Testing for [file retrieval](https://portswigger.net/web-security/xxe#exploiting-xxe-to-retrieve-files) by defining an external entity based on a well-known operating system file and using that entity in data that is returned in the application's response.
 - Testing for [blind XXE vulnerabilities](https://portswigger.net/web-security/xxe/blind) by defining an external entity based on a URL to a system that you control, and monitoring for interactions with that system. [Burp Collaborator](https://portswigger.net/burp/documentation/desktop/tools/collaborator) is perfect for this purpose.
 - Testing for vulnerable inclusion of user-supplied non-XML data within a server-side XML document by using an [XInclude attack](https://portswigger.net/web-security/xxe#xinclude-attacks) to try to retrieve a well-known operating system file.v
+ 
+
+if you want to show .php file , you can use this , 
+`php://filter/read=conert.base64-encode/resource={FILE}`
+
+and you will puut it here 
+<.... SYSTEM "HERE">]>
