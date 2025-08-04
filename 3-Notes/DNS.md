@@ -10,5 +10,16 @@ for example you try to get access to **app.hackthebox.com** to get this first yo
 ![[URL _Parts.png]]
 
 so it will ask about which server have `.com` top-level domain and it will answer with the server that have this TLD(top level domain) then will ask this server about the SLD(second-level domain) then this server will answer with the name of the server that have this domain 
+```Visual
 
+Browser → OS Stub Resolver
+       → Recursive Resolver (e.g. 8.8.8.8)
+           → Root Servers
+               → TLD Servers (.com)
+                   → Authoritative NS (ns1.google.com)
+                       → Final A Record (IP)
+→ Backtrack same way with the answer
+
+```
 ___
+while this happening maybe a hacker try to **spoofing the DNS** and to prevent  this you can add **DNSSEC** and use it to crypto the DNS 
