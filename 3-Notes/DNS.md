@@ -22,4 +22,6 @@ Browser → OS Stub Resolver
 
 ```
 ___
+sometimes you use some tools like **`dig`** which is a tool that done **DNS Resolution**   
+
 while this happening maybe a hacker try to **spoofing the DNS** and to prevent  this you can add **DNSSEC** and use it to crypto the DNS 
