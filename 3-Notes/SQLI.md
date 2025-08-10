@@ -32,3 +32,11 @@ Databases, in general, are categorized into `Relational Databases` and `Non-Rela
 ## Relational Databases
 
 A relational database is the most common type of database. It uses a schema, a template, to dictate the data structure stored in the database. For example, we can imagine a company that sells products to its customers having some form of stored knowledge about where those products go, to whom, and in what quantity. However, this is often done in the back-end and without obvious informing in the front-end. Different types of relational databases can be used for each approach. For example, the first table can store and display basic customer information, the second the number of products sold and their cost, and the third table to enumerate who bought those products and with what payment data.
+
+
+
+
+
+
+
+## **Blind Injection**
