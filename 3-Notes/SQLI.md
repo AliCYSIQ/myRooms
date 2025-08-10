@@ -48,3 +48,6 @@ Bind SQLI happen because there's a bug (**SQLI**) but it isn't show in the respo
 
 - The first of these values causes the query to return results, because the injected `AND '1'='1` condition is true. As a result, the "Welcome back" message is displayed.
 - The second value causes the query to not return any results, because the injected condition is false. The "Welcome back" message is not displayed.
+
+and we can use this payload
+`' AND SUBSTRING((SELECT password FROM users WHERE username='administrator'),1,1) > m` if Welcomeback show up then first char is after `m` and if not it maybe be `m` or earlier (less) 
