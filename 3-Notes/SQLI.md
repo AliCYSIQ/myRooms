@@ -40,3 +40,11 @@ A relational database is the most common type of database. It uses a schema, a t
 
 
 ## **Blind Injection**
+Bind SQLI happen because there's a bug (**SQLI**) but it isn't show in the response  and that could happen because of the injection plan like sometimes it is sometime happen in cookie but we can know from how the response act like , let's say a website show welcome back if everything work , so from this we can do this 
+```
+…xyz' AND '1'='1 
+…xyz' AND '1'='2
+```
+
+- The first of these values causes the query to return results, because the injected `AND '1'='1` condition is true. As a result, the "Welcome back" message is displayed.
+- The second value causes the query to not return any results, because the injected condition is false. The "Welcome back" message is not displayed.
