@@ -49,5 +49,8 @@ Bind SQLI happen because there's a bug (**SQLI**) but it isn't show in the respo
 - The first of these values causes the query to return results, because the injected `AND '1'='1` condition is true. As a result, the "Welcome back" message is displayed.
 - The second value causes the query to not return any results, because the injected condition is false. The "Welcome back" message is not displayed.
 
+to know if certain  table exists and that by this payload 
+`' AND (SELECT 'a' FROM users LIMIT 1)='a'`  if `WelcomeBack` message show up that's mean there's table with this name and if not you need to continue your search 
+
 and we can use this payload
-`' AND SUBSTRING((SELECT password FROM users WHERE username='administrator'),1,1) > m` if Welcomeback show up then first char is after `m` and if not it maybe be `m` or earlier (less) 
+`' AND SUBSTRING((SELECT password FROM users WHERE username='administrator'),1,1) > m` if Welcome back show up then first char is after `m` and if not it maybe be `m` or earlier (less) 
