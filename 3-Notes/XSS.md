@@ -129,17 +129,17 @@ DOM Based XSS is where the JavaScript execution happens directly in the browser 
 The website's JavaScript gets the contents from the `window.location.hash` parameter and then writes that onto the page in the currently being viewed section. The contents of the hash aren't checked for malicious code, allowing an attacker to inject JavaScript of their choosing onto the webpage.  
   
   
-**Potential Impact:**  
+## **Potential Impact:**  
   
 Crafted links could be sent to potential victims, redirecting them to another website or steal content from the page or the user's session.
 
-**How to test for Dom Based XSS:**
+## **How to test for Dom Based XSS:**
 
 DOM Based XSS can be challenging to test for and requires a certain amount of knowledge of JavaScript to read the source code. You'd need to look for parts of the code that access certain variables that an attacker can have control over, such as "**window.location.x**" parameters.
 
-  
+first you need to input just some text and see how the website work with it and sometime it affect another variable so you need java-script debugger so you can stop and see how this variable change affected by your text.
+and  maybe it's inside `""` here you should try escept this by add `"` or `'` 
 
-When you've found those bits of code, you'd then need to see how they are handled and whether the values are ever written to the web page's DOM or passed to unsafe JavaScript methods such as **eval()**.
 
 -------
 # **Blind XSS**
