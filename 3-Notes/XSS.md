@@ -141,7 +141,15 @@ first you need to input just some text and see how the website work with it and 
 and  maybe it's inside `""` here you should try escept this by add `"` or `'` 
 
 
-what i learn from labs
+The `document.write` sink works with `script` elements, so you can use a simple payload, such as the one below: 
+`document.write('... <script>alert(document.domain)</script> ...'); 
+
+and this when it use in search but sometimes it do not use and use in some id , then you just need to add this in the url (if it not already) for example in portswigger lab, there's 
+store-ID and all you need is just add this as parameter in url and add the injection there.
+
+this is for `document.write` but there's more like `innerHTML` 
+and here it do not use or exploit `<script>` as way for security but you can use another things like `<img>` , for example `<img src=1 onerror=alert(1)>` and you can edit it , so it can break somethings like double-quote `"`  
+
 
 -------
 # **Blind XSS**
