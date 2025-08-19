@@ -141,6 +141,8 @@ first you need to input just some text and see how the website work with it and 
 and  maybe it's inside `""` here you should try escept this by add `"` or `'` 
 
 
+what i learn from labs
+
 -------
 # **Blind XSS**
 
