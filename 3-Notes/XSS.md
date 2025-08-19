@@ -1,6 +1,6 @@
  [[week1]]
 
-**Cross-Site Scripting**: 
+# **Cross-Site Scripting**: 
 
 better known as XSS in the cybersecurity community, is classified as an injection attack where malicious JavaScript gets injected into a web application with the intention of being executed by other users. In this room, you'll learn about the different XSS types, how to create XSS payloads, how to modify your payloads to evade filters, and then end with a practical lab where you can try out your new skills.
 
@@ -34,7 +34,7 @@ This payload is a lot more specific than the above examples. This would be about
 Now that the email address for the account has changed, the attacker may perform a reset password attack
 
 ----------------------------------------------------------------------------------
-			**Reflected XSS**  
+# **Reflected XSS**  
 
   
 
@@ -78,7 +78,7 @@ Once you've found some data which is being reflected in the web application, you
 
 -----------------------------------
 
-**Stored XSS**
+# **Stored XSS**
 
   
 As the name infers, the XSS payload is stored on the web application (in a database, for example) and then gets run when other users visit the site or web page.  
@@ -108,7 +108,7 @@ You'll need to test every possible point of entry where it seems data is stored 
 Sometimes developers think limiting input values on the client-side is good enough protection, so changing values to something the web application wouldn't be expecting is a good source of discovering stored XSS, for example, an age field that is expecting an integer from a dropdown menu, but instead, you manually send the request rather than using the form allowing you to try malicious payloads.
 
 -------
-**DOM Based XSS**
+# **DOM Based XSS**
 
 **What is the DOM?**  
 
@@ -142,7 +142,7 @@ DOM Based XSS can be challenging to test for and requires a certain amount of kn
 When you've found those bits of code, you'd then need to see how they are handled and whether the values are ever written to the web page's DOM or passed to unsafe JavaScript methods such as **eval()**.
 
 -------
-**Blind XSS**
+# **Blind XSS**
 
   
 Blind XSS is similar to a stored XSS (which we covered in task 4) in that your payload gets stored on the website for another user to view, but in this instance, you can't see the payload working or be able to test it against yourself first.  
