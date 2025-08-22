@@ -199,3 +199,8 @@ In addition to whitelisting specific domains, content security policy also provi
 
 - The CSP directive can specify a nonce (a random value) and the same value must be used in the tag that loads a script. If the values do not match, then the script will not execute. To be effective as a control, the nonce must be securely generated on each page load and not be guessable by an attacker.
 - The CSP directive can specify a hash of the contents of the trusted script. If the hash of the actual script does not match the value specified in the directive, then the script will not execute. If the content of the script ever changes, then you will of course need to update the hash value that is specified in the directive.
+
+first lab didnt understaand it good , so i will leave it t another time [link to the lab](https://portswigger.net/web-security/cross-site-scripting/content-security-policy/lab-very-strict-csp-with-dangling-markup-attack)
+
+second thing
+### Bypassing CSP with policy injection
