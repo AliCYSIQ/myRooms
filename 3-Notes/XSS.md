@@ -179,3 +179,6 @@ theres two more task you should end in the review days https://tryhackme.com/roo
 
 
 # CSP
+CSP is a browser security mechanism that aims to mitigate XSS and some other attacks. It works by restricting the resources (such as scripts and images) that a page can load and restricting whether a page can be framed by other pages.
+
+To enable CSP, a response needs to include an HTTP response header called `Content-Security-Policy` with a value containing the policy. The policy itself consists of one or more directives, separated by semicolons.
