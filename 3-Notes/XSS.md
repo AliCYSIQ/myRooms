@@ -176,3 +176,6 @@ A popular tool for Blind XSS attacks is [XSS Hunter Express](https://github.com/
 
 
 theres two more task you should end in the review days https://tryhackme.com/room/xss
+
+
+# CSP
