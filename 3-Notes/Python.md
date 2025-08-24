@@ -32,5 +32,21 @@ for i in (len(nums)):
 
 **range(first, n)** here start from **first** and end with **n-1** which mean if **first = 0** and **n = 5** this is mean it will be like this **\[0,1,2,3,4]**
 ### ROMAN-TO-INTEGER
-
+we use dict and this is the sol
+```python
+class Solution(object):
+    def romanToInt(self, s):
+        d = {'I':1, 'V':5, 'X':10, 'L':50, 'C':100, 'D':500, 'M':1000}
+        total = 0 
+        i = 0
+        while i < len(s):
+            # if there's a next character and current < next -> subtractive pair
+            if i + 1 < len(s) and d[s[i]] < d[s[i+1]]:
+                total += d[s[i+1]] - d[s[i]]
+                i += 2      # skip the next character because we already used it
+            else:
+                total += d[s[i]]
+                i += 1
+        return total
+```
 
