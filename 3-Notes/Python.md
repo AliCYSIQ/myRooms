@@ -19,3 +19,18 @@ and can use `socket.SOCK_DGRAM` fro UDP connection and in UDP you do not need `c
 **i will write only the new things or what i always forget it**
 ## EASY
 
+### TWO-SUM
+to solve this you need to use indeces and for that you caan use this:
+`for i in (len(nums))` 
+and youu need to use instaaed **for loop** 
+
+like this:
+```python
+for i in (len(nums)):
+	for j in range(i+1,len(nums))
+```
+
+**range(first, n)** here start from **first** and end with **n-1** which mean if **first = 0** and **n = 5** this is mean it will be like this **\[0,1,2,3,4]**
+### ROMAN-TO-INTEGER
+
+
