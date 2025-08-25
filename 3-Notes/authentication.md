@@ -29,6 +29,8 @@ In many areas of web development, logic flaws cause the website to behave unexpe
 ## Vulnerabilities in password-based login
 ### Brute-force attacks
 
-A brute-force attack is when an attacker uses a system of trial and error to guess valid user credentials. These attacks are typically automated using wordlists of usernames and passwords. Automating this process, especially using dedicated tools, potentially enables an attacker to make vast numbers of login attempts at high speed.
+A brute-force attack is when an attacker uses a system of trial and error to guess valid user credentials. These attacks are typically automated using word lists of usernames and passwords. Automating this process, especially using dedicated tools, potentially enables an attacker to make vast numbers of login attempts at high speed.
 
 Brute-forcing is not always just a case of making completely random guesses at usernames and passwords. By also using basic logic or publicly available knowledge, attackers can fine-tune brute-force attacks to make much more educated guesses. This considerably increases the efficiency of such attacks. Websites that rely on password-based login as their sole method of authenticating users can be highly vulnerable if they do not implement sufficient brute-force pro
+
+**some labs** sometimes brute-forcing have really big logic flaw which lead to account take over
