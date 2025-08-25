@@ -36,5 +36,7 @@ Brute-forcing is not always just a case of making completely random guesses at u
 **some labs** sometimes brute-forcing have really big logic flaw which lead to account take over
 like some tell you if the username is the wrong or the password , which is big mistake from the website like if the username is wrong tell you `username is wrong` and if the password was wrong will tell you `password is wrong`
 
-but some of them fix this by telling you every time `username or password is wrong`
+but some of them fix this by telling you every time `username or password is wrong.`
+you can try to input true username and see what will happened and when i do this , this is what happened `usernamme or password is wrong` it the same but not it is not , there is no `.` in the end which mean it different response and this is logic flew lead to brute force 
+
 
