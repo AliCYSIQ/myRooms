@@ -16,7 +16,7 @@ and it take the payload from the same list
 
 ## Pitchfork attack
 
-it the same as Battering ram if there's 2 positions it will payload both of these positions every time, but this one take the payloads from different lists of payloads 
+it the same as Battering ram if there's 2 positions it will payload both of these positions every time(at the same time , parallel), but this one take the payloads from different lists of payloads 
 
 ## Cluster bomb attack
 
