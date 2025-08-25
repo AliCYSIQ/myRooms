@@ -34,5 +34,7 @@ A brute-force attack is when an attacker uses a system of trial and error to gue
 Brute-forcing is not always just a case of making completely random guesses at usernames and passwords. By also using basic logic or publicly available knowledge, attackers can fine-tune brute-force attacks to make much more educated guesses. This considerably increases the efficiency of such attacks. Websites that rely on password-based login as their sole method of authenticating users can be highly vulnerable if they do not implement sufficient brute-force pro
 
 **some labs** sometimes brute-forcing have really big logic flaw which lead to account take over
-like some tell you if the username is the wrong or the password , which is big mistake from the website 
+like some tell you if the username is the wrong or the password , which is big mistake from the website like if the username is wrong tell you `username is wrong` and if the password was wrong will tell you `password is wrong`
+
+but some of them fix this by telling you every time `username or password is wrong`
 
