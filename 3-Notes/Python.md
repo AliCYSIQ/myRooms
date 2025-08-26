@@ -55,6 +55,10 @@ class Solution(object):
 ## strings
 you can let every first char from your message is upper case by `message.title()`
 and can let every chr is upper case by `message.upper()` or lower `message.lower`
+
 `\n` mean new line
 `\t` mean tab
+
 `.strip` it function use to remove whitespace from both side of a word for exampl `' python '` will be `'python'` after using it , and there's **`.lstrip`** for left only and **`.rstrip`** for right only 
+
+`.removeprefix()` which will remove anything you want **e.g. `https://example.com`** you use it like this `url.removeprefix('https//')` and it will be removed and be **`example.com`**
