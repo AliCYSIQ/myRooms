@@ -44,3 +44,7 @@ and some of them depaend of the time of the responce
 [need to complete from here](https://portswigger.net/web-security/authentication/password-based#Flawed%20brute-force%20protection)
 
 some time if you try to sign in 3 times and all of them are fails the website will block you for some minute  but if you try to sign in 2 times and fails then sign in for the 3 time was correct the counter of attempt will reset which will be logic flaw because you can do 2 random sign in (to get the victim account) then sign in with your account and by this you can make brute force 
+
+
+
+## Vulnerabilities in multi-factor authentication
