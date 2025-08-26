@@ -76,3 +76,5 @@ this bug let you use another user email(in condition that email do not have acco
 sometimes OTP will be generate every some time (e.g. 30s) and if the new one is generated , the old should be unusable  but sometimes it still be able to reuse it which lead to brutforce which is bug
 
 good i dont know how to explain it but this is the [link](https://hackerone.com/reports/1050244?utm_source=chatgpt.com)
+
+you can bypass 2FA only be delete one cookie like `bb_refresh` 
