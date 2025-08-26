@@ -55,3 +55,5 @@ class Solution(object):
 ## strings
 you can let every first char from your message is upper case by `message.title()`
 and can let every chr is upper case by `message.upper()` or lower `message.lower`
+`\n` mean new line
+`\t` mean tab
