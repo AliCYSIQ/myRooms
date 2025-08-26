@@ -49,3 +49,6 @@ some time if you try to sign in 3 times and all of them are fails the website wi
 
 ## Vulnerabilities in multi-factor authentication
 Many websites rely exclusively on single-factor authentication using a password to authenticate users. However, some require users to prove their identity using multiple authentication factors.
+
+first vulnerability you may face is you can bypass 2 factor authentication by just drop the request of  2FA , for example you sign in after that it ask for 2FA you can just drop the request (using burp) then go to your account page and it will let you in 
+
