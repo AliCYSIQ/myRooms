@@ -106,7 +106,7 @@ Root cause:
 
 source : [link](https://medium.com/%40sharp488/critical-account-takeover-mfa-auth-bypass-due-to-cookie-misconfiguration-3ca7d1672f9d)
 
-
+you can bypass 2FA by
 
 
 **you can** bypass login by `forget password` which will send rest password link to your email , you can intercept the  reqest and try to add your email next to the victime email(there's such way to do that and i will add most of then here)
