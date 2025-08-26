@@ -61,4 +61,4 @@ and can let every chr is upper case by `message.upper()` or lower `message.lower
 
 `.strip` it function use to remove whitespace from both side of a word for exampl `' python '` will be `'python'` after using it , and there's **`.lstrip`** for left only and **`.rstrip`** for right only 
 
-`.removeprefix()` which will remove anything you want **e.g. `https://example.com`** you use it like this `url.removeprefix('https//')` and it will be removed and be **`example.com`**
+`.removeprefix()` which will remove anything you want **e.g. `https://example.com`** you use it like this `url.removeprefix('https//')` and it will be removed and be **`example.com`** but only if it start with it , if it end it with it like `file.txt` then will need `removesuffix('.txt')` which will remove it 
