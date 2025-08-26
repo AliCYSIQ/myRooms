@@ -52,3 +52,14 @@ Many websites rely exclusively on single-factor authentication using a password 
 
 first vulnerability you may face is you can bypass 2 factor authentication by just drop the request of  2FA , for example you sign in after that it ask for 2FA you can just drop the request (using burp) then go to your account page and it will let you in 
 
+some times the website do not verify if you were the same user or no in 2FA for example
+```
+POST HTTP/2 
+Set-Cookie: verify=username; ssession:...
+```
+you can change it to 
+```
+POST HTTP/2 
+Set-Cookie: verify=victime-username; ssession:...
+```
+and if it let try without limit , then this is full account takeover 
