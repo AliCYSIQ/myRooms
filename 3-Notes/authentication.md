@@ -106,7 +106,10 @@ Root cause:
 
 source : [link](https://medium.com/%40sharp488/critical-account-takeover-mfa-auth-bypass-due-to-cookie-misconfiguration-3ca7d1672f9d)
 
-you can bypass 2FA by
+you can bypass 2FA by removing `CSRF` token and it will send you to page with 
+`invaild csrf tocken`  all you need here just change the URL to any other page like `setteings`
+you can see it [here](https://youtu.be/NJyN7Ys7BC4)
 
 
-**you can** bypass login by `forget password` which will send rest password link to your email , you can intercept the  reqest and try to add your email next to the victime email(there's such way to do that and i will add most of then here)
+
+**you can** bypass login by `forget password` which will send rest password link to your email , you can intercept the  request and try to add your email next to the victime email(there's such way to do that and i will add most of then here)
