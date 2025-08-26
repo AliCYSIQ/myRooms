@@ -65,4 +65,5 @@ Set-Cookie: verify=victime-username; ssession:...
 and if it let try without limit , then this is full account takeover 
 
 
-sometimes when you try to enter 2FA code it will let you
+sometimes when you try to enter 2FA code it will let you try just two or three times then it will let you out and this is the only way the website use as protection against Burt force which is vulnerable
+all you need to use is macros (i will write about it later)
