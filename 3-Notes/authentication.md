@@ -50,8 +50,8 @@ some time if you try to sign in 3 times and all of them are fails the website wi
 ## Vulnerabilities in multi-factor authentication
 Many websites rely exclusively on single-factor authentication using a password to authenticate users. However, some require users to prove their identity using multiple authentication factors.
 
-first vulnerability you may face is you can bypass 2 factor authentication by just drop the request of  2FA , for example you sign in after that it ask for 2FA you can just drop the request (using burp) then go to your account page and it will let you in 
-
+first vulnerability you may face is you can bypass 2 factor authentication by just drop the request of  2FA , for example you sign in after that it ask for 2FA you can just drop the request (using burp) then go to your account page and it will let you in , or you can just when arriving to the OTP step just enter `website.com/dashbord` instead of the origin URL
+___
 some times the website do not verify if you were the same user or no in 2FA for example
 ```
 POST HTTP/2 
@@ -63,20 +63,20 @@ POST HTTP/2
 Set-Cookie: verify=victime-username; ssession:...
 ```
 and if it let try without limit , then this is full account takeover 
-
+____
 
 sometimes when you try to enter 2FA code it will let you try just two or three times then it will let you out and this is the only way the website use as protection against Burt force which is vulnerable
 all you need to use is macros (i will write about it later)
-
+_______
 sometimes all you need to do it is just let blank , for example in 2FA holder you write `1111` then using `burp` remove it and let it blank(nothing written) and send the request and it will be passed and you will be login
-
+_____
  good i dont know how to explain it but this is the [link](https://hackerone.com/reports/2885636)
 this bug let you use another user email(in condition that email do not have account) and to do that you need to active 2FA then go and change your email to the victim email here the website will not ask for OTP to make sure if you have this email or not and if the emaail owner try to make account they will see " this email have account" 
-
+_____
 sometimes OTP will be generate every some time (e.g. 30s) and if the new one is generated , the old should be unusable  but sometimes it still be able to reuse it which lead to brutforce which is bug
-
-good i dont know how to explain it but this is the [link](https://hackerone.com/reports/1050244?utm_source=chatgpt.com)
-
+_____
+bug  i dont know how to explain it but this is the [link](https://hackerone.com/reports/1050244?utm_source=chatgpt.com)
+_____
 you can bypass 2FA only be delete one cookie like `bb_refresh` and the website will not ask for 2FA
 
 **Target (redacted):** `sso.target.com`
@@ -105,11 +105,11 @@ Root cause:
     /v2/mfalogin/enrolled endpoint did not validate authentication state or MFA.
 
 source : [link](https://medium.com/%40sharp488/critical-account-takeover-mfa-auth-bypass-due-to-cookie-misconfiguration-3ca7d1672f9d)
-
+_____
 you can bypass 2FA by removing `CSRF` token and it will send you to page with 
 `invaild csrf tocken`  all you need here just change the URL to any other page like `setteings`
 you can see it [here](https://youtu.be/NJyN7Ys7BC4)
 
-
+_____
 
 **you can** bypass login by `forget password` which will send rest password link to your email , you can intercept the  request and try to add your email next to the victime email(there's such way to do that and i will add most of then here)
