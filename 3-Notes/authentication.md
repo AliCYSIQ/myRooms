@@ -113,3 +113,198 @@ you can see it [here](https://youtu.be/NJyN7Ys7BC4)
 _____
 
 **you can** bypass login by `forget password` which will send rest password link to your email , you can intercept the  request and try to add your email next to the victime email(there's such way to do that and i will add most of then here)
+
+
+---
+
+# Authentication Vulnerabilities
+
+Authentication vulnerabilities can allow attackers to gain access to sensitive data and functionality. They also expose additional attack surface for further exploits.
+
+---
+
+## What is Authentication?
+
+Authentication is the process of verifying the identity of a user or client. Since websites are potentially exposed to anyone on the internet, robust authentication mechanisms are integral to web security.
+
+### Types of authentication:
+
+- **Something you know** → e.g., password, security question (knowledge factors).
+    
+- **Something you have** → e.g., phone, hardware token (possession factors).
+    
+- **Something you are / do** → e.g., biometrics, behaviour patterns (inherence factors).
+    
+
+---
+
+## Authentication vs Authorisation
+
+- **Authentication** = verifying that the user is who they claim to be.
+    
+- **Authorisation** = verifying what the user is allowed to do.
+    
+
+Example: `Carlos123` authenticates with correct password → authenticated.  
+But whether Carlos can delete other users depends on **authorisation**.
+
+---
+
+# Vulnerabilities in Authentication
+
+Vulnerabilities usually come from:
+
+- Weak mechanisms that don’t protect against brute-force.
+    
+- Logic flaws or poor implementation that allow bypassing authentication entirely (_broken authentication_).
+    
+
+---
+
+## Vulnerabilities in Password-Based Login
+
+### 1. User Enumeration
+
+- Some websites disclose whether _username_ or _password_ is incorrect.
+    
+- Example: error messages differ:
+    
+    - Wrong username → “username is wrong”
+        
+    - Wrong password → “password is wrong”
+        
+- Fix attempt: combine into generic: “username or password is wrong.”
+    
+- But even here, differences in punctuation (e.g. one has a full stop, one doesn’t) can leak validity → **logic flaw → brute force possible**.
+    
+
+### 2. Timing Attacks
+
+- Response time differences (valid vs invalid usernames) can allow attackers to infer accounts.
+    
+
+### 3. Brute-Force Protection Flaws
+
+- Some sites block after N attempts.
+    
+- Logic flaw: if you try 2 wrong passwords, then 1 correct (on your own account), the counter resets.
+    
+- Attacker can keep brute-forcing 2 attempts, then reset with a login to their own account → unlimited attempts.
+    
+
+---
+
+## Vulnerabilities in Multi-Factor Authentication (MFA)
+
+Many sites use MFA, but flawed implementations make it bypassable.  
+Grouped by type:
+
+---
+
+### A) Flow Bypass
+
+- **Dropping the request**: After login, the server asks for 2FA. If you drop that request in Burp and directly load `/dashboard`, access is granted.
+    
+- **Direct URL access**: Instead of submitting OTP, navigate straight to `/dashboard`.
+    
+
+---
+
+### B) Improper State / Binding
+
+- **User verification cookie manipulation**:
+    
+    ```
+    Set-Cookie: verify=username; session=...
+    ```
+    
+    Change to:
+    
+    ```
+    Set-Cookie: verify=victim-username; session=...
+    ```
+    
+    → If no rate limits, full account takeover.
+    
+- **Session token set pre-MFA**: Some apps assign a valid session cookie _after username entry_, before OTP validation.  
+    Example exploit flow:
+    
+    ```
+    POST /v2/login → session created
+    POST /v2/mfalogin/enrolled → app grants access without MFA
+    ```
+    
+    Source: [Medium write-up](https://medium.com/@sharp488/critical-account-takeover-mfa-auth-bypass-due-to-cookie-misconfiguration-3ca7d1672f9d).
+    
+- **Email change without OTP verification**:  
+    HackerOne [report #2885636](https://hackerone.com/reports/2885636).  
+    User enables 2FA → changes email to victim’s. Site doesn’t verify ownership. Victim can’t register (email “already taken”).
+    
+
+---
+
+### C) Rate-Limiting Flaws
+
+- Some sites allow only 2–3 OTP attempts, then block.
+    
+- Attacker can automate with Burp Macros to cycle through → brute-force OTPs.
+    
+- Old OTPs still valid even after new ones are generated → reuse flaw → brute-force window extended.
+    
+
+---
+
+### D) Input Validation Failures
+
+- Sending blank OTP (e.g., enter `1111` but strip it in Burp to nothing) → login granted.
+    
+- OTP reuse across sessions (H1 [report #2529780](https://hackerone.com/reports/2529780)).
+    
+
+---
+
+### E) CSRF / Token Handling
+
+- Remove CSRF token in OTP submission → server returns “invalid CSRF token.”
+    
+- Change URL manually to `/settings` → bypass.
+    
+- Demonstrated in [YouTube video](https://youtu.be/NJyN7Ys7BC4).
+    
+
+---
+
+### F) Cookie Manipulation
+
+- Delete a specific cookie (`bb_refresh`) → site no longer asks for 2FA.
+    
+- Full access without OTP prompt.
+    
+
+---
+
+### G) Reported MFA Logic Flaws
+
+- **Account recovery flaw**: H1 [report #1050244](https://hackerone.com/reports/1050244). 2FA enforcement bypass during recovery flow.
+    
+- **Snapchat OTP flaw**: H1 [report #921780](https://hackerone.com/reports/921780). Login/logout flow mishandled OTP → account takeover.
+    
+
+---
+
+# Summary
+
+Authentication and MFA bypass flaws often come from:
+
+1. **Weak error handling** (enumeration, timing).
+    
+2. **Improper flow/state binding** (session before OTP, cookie values, recovery missteps).
+    
+3. **Poor rate-limiting** (OTP brute force, reset logic).
+    
+4. **Validation issues** (blank input, OTP reuse).
+    
+5. **Session/cookie mishandling** (delete or alter one cookie → bypass).
+    
+
+These flaws almost always lead to **account takeover despite MFA**, which is critical impact.
