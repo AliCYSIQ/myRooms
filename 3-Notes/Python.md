@@ -57,7 +57,7 @@ you can let every first char from your message is upper case by `message.title()
 and can let every chr is upper case by `message.upper()` or lower `message.lower`
 
 `\n` mean new line
-`\t` mean tab
+`\t` mean tab, and it space if there's no space and start of line if it with `\n`
 
 `.strip` it function use to remove whitespace from both side of a word for exampl `' python '` will be `'python'` after using it , and there's **`.lstrip`** for left only and **`.rstrip`** for right only 
 
