@@ -63,3 +63,6 @@ POST HTTP/2
 Set-Cookie: verify=victime-username; ssession:...
 ```
 and if it let try without limit , then this is full account takeover 
+
+
+sometimes when you try to enter 2FA code it will let you
