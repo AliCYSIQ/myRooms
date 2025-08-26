@@ -48,3 +48,4 @@ some time if you try to sign in 3 times and all of them are fails the website wi
 
 
 ## Vulnerabilities in multi-factor authentication
+Many websites rely exclusively on single-factor authentication using a password to authenticate users. However, some require users to prove their identity using multiple authentication factors.
