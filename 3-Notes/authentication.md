@@ -67,3 +67,8 @@ and if it let try without limit , then this is full account takeover
 
 sometimes when you try to enter 2FA code it will let you try just two or three times then it will let you out and this is the only way the website use as protection against Burt force which is vulnerable
 all you need to use is macros (i will write about it later)
+
+sometimes all you need to do it is just let blank , for example in 2FA holder you write `1111` then using `burp` remove it and let it blank(nothing written) and send the request and it will be passed and you will be login
+
+good i dont know how to explain it but this is https://hackerone.com/reports/2885636
+this bug let you use another user email(in condition that email do not have account) and to do that you need to active 2FA then go and change your email to the victim email here the website will not ask for OTP to make sure if you have this email or not and if the emaail owner try to make account they will see " this email have account" 
