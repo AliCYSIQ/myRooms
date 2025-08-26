@@ -77,4 +77,32 @@ sometimes OTP will be generate every some time (e.g. 30s) and if the new one is 
 
 good i dont know how to explain it but this is the [link](https://hackerone.com/reports/1050244?utm_source=chatgpt.com)
 
-you can bypass 2FA only be delete one cookie like `bb_refresh` 
+you can bypass 2FA only be delete one cookie like `bb_refresh` and the website will not ask for 2FA
+
+**Target (redacted):** `sso.target.com`
+
+🔍 Vulnerability Flow
+
+1. **Login flow observed:**
+    
+    - `POST /v2/login` (username submitted)
+        
+    - Redirects → `GET /v2/login/options` (asks for password)
+        
+    - Wrong password → `POST /v2/login` → server response: `302` → `GET /v2/login?failed`
+        
+2. **Exploit:**
+    
+    - Replace failed request with:
+      POST /v2/mfalogin/enrolled
+
+    Forward the request → application grants access.
+
+Root cause:
+
+    Application assigned a valid session cookie after username entry.
+
+    /v2/mfalogin/enrolled endpoint did not validate authentication state or MFA.
+
+source : [link](https://medium.com/%40sharp488/critical-account-takeover-mfa-auth-bypass-due-to-cookie-misconfiguration-3ca7d1672f9d)
+
