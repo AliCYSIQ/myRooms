@@ -65,10 +65,26 @@ and can let every chr is upper case by `message.upper()` or lower `message.lower
 
 ## list
 
-you can introduce this by [] like `list = ['anything', 1, 'ali']` and as you say it can have **strings** and **integers** and it start from zero until ...  you can print it by the index of what you want like `print(list[0])` which will print `anything` ,you can access last one in list by `print(list[-1])` which will write `ali` and you continue like this , `-2` will be the one before last one and `-3` is the third but from end and so on 
+### introduction 
+you can introduce this by [] like `list = ['anything', 1, 'ali']` and as you say it can have **strings** and **integers** and it start from zero until ...  
+you can print it by the index of what you want like `print(list[0])` which will print `anything` 
+you can access last one in list by `print(list[-1])` which will write `ali` and you continue like this , `-2` will be the one before last one and `-3` is the third but from end and so on 
 
-you can change element in list in this way `list[0] = 'nothing'` and to add  a completely new one in the end , do this `list.append('tah')` and if you want  to add a new one but in specific position , do this `list.insert(0,'woow')` now it will be in the first and you can control the index 
+### changing and adding
+you can change element in list in this way `list[0] = 'nothing'` 
+and to add  a completely new one in the end , do this `list.append('tah')`
+and if you want  to add a new one but in specific position , do this `list.insert(0,'woow')` now it will be in the first and you can control the index 
 This operation shifts every other value in the list one position to the right.
+###  removing
+you can remove any element by using this `del list[0]` 
+and you remove the last one by this `list.pop()` which will remove the last one
+and you can use `pop()` to remove any element in any position`list.pop(2)` it will remove the   third element    
+the different here between `del` and `pop()` is the same  in removing but `del` will remove an element completely and `pop()` can be sigh  the removed element to a variable like this  `removeELEMENT = list.pop()` that's right it will remove it from  the list but it will sign to the variable 
+Sometimes you won’t know the position of the value you want to remove
+from a list. If you only know the value of the item you want to remove, you
+can use `list.remove('ali')`
+#### list.remove()
+it use to remove element by its value not its position 
 
-you can remove any element by using this `del list[0]` and you remove the last one by this `list.pop()` which will remove the last one and you can use `pop()` to remove any element in any position`list.pop(2)` it will remove the   third element    
 
+40
