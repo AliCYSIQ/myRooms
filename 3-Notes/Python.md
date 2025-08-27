@@ -67,3 +67,6 @@ and can let every chr is upper case by `message.upper()` or lower `message.lower
 
 you can introduce this by [] like `list = ['anything', 1, 'ali']` and as you say it can have **strings** and **integers** and it start from zero until ...  you can print it by the index of what you want like `print(list[0])` which will print `anything` ,you can access last one in list by `print(list[-1])` which will write `ali` and you continue like this , `-2` will be the one before last one and `-3` is the third but from end and so on 
 
+you can change element in list in this way `list[0] = 'nothing'` and to add  a completely new one in the end , do this `list.append('tah')` and if you want  to add a new one but in specific position , do this `list.insert(0,'woow')` now it will be in the first and you can control the index 
+This operation shifts every other value in the list one position to the right.
+
