@@ -51,7 +51,7 @@ class Solution(object):
 ```
 
 
-# wow
+# learn 
 ## strings
 you can let every first char from your message is upper case by `message.title()`
 and can let every chr is upper case by `message.upper()` or lower `message.lower`
@@ -62,3 +62,8 @@ and can let every chr is upper case by `message.upper()` or lower `message.lower
 `.strip` it function use to remove whitespace from both side of a word for exampl `' python '` will be `'python'` after using it , and there's **`.lstrip`** for left only and **`.rstrip`** for right only 
 
 `.removeprefix()` which will remove anything you want **e.g. `https://example.com`** you use it like this `url.removeprefix('https//')` and it will be removed and be **`example.com`** but only if it start with it , if it end it with it like `file.txt` then will need `removesuffix('.txt')` which will remove it 
+
+## list
+
+you can introduce this by [] like `list = ['anything', 1, 'ali']` and as you say it can have **strings** and **integers** and it start from zero until ...  you can print it by the index of what you want like `print(list[0])` which will print `anything` ,you can access last one in list by `print(list[-1])` which will write `ali` and you continue like this , `-2` will be the one before last one and `-3` is the third but from end and so on 
+
