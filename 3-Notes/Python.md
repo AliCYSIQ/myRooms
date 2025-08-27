@@ -94,7 +94,9 @@ and it can be reversed like this `list.sort(reverse=True)` (from z to a)
 for both cases the order of the list is permanently changed
 
 #### list.sorted()
-this use to sort but its change will be temporary 
+this use to sort (from a to z)  
+and it can be reversed like this `list.sort(reverse=True)` (from z to a) 
+but its change will be temporary 
 
 #### list.reverse()
 which reverse the original order (it not like z to a , no , it just reverse it order)
