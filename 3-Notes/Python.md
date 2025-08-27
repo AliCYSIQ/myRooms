@@ -87,4 +87,4 @@ can use `list.remove('ali')`
 it use to remove element by its value not its position 
 
 
-40
+42
