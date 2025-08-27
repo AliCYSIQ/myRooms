@@ -84,7 +84,24 @@ Sometimes you won’t know the position of the value you want to remove
 from a list. If you only know the value of the item you want to remove, you
 can use `list.remove('ali')`
 #### list.remove()
-it use to remove element by its value not its position 
+it use to remove element by its value not its position/index
 
+### sorting
 
-42
+#### list.sort()
+this function will sort the list alphabetically (from a to z)
+and it can be reversed like this `list.sort(reverse=True)` (from z to a)
+for both cases the order of the list is permanently changed
+
+#### list.sorted()
+this use to sort but its change will be temporary 
+
+#### list.reverse()
+which reverse the original order (it not like z to a , no , it just reverse it order)
+before: \['bmw', 'audi', 'toyota', 'subaru']
+after: \['subaru', 'toyota', 'audi', 'bmw']
+
+The reverse() method changes the order of a list permanently
+
+#### len(list)
+let you find the length of anything , and if it it use on list as now it will give how many element in it and if it use on normal string will find its length(how many letters in the word)
