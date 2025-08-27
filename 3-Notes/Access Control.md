@@ -11,3 +11,22 @@
 ### Vertical access controls
 
 Vertical access controls are mechanisms that restrict access to sensitive functionality to specific types of users.
+### Horizontal access controls
+
+Horizontal access controls are mechanisms that restrict access to resources to specific users.
+
+### Context-dependent access controls
+
+Context-dependent access controls restrict access to functionality and resources based upon the state of the application or the user's interaction with it.
+Context-dependent access controls prevent a user performing actions in the wrong order. For example, a retail website might prevent users from modifying the contents of their shopping cart after they have made payment.
+
+----
+
+### Vertical privilege escalation
+
+If a user can gain access to functionality that they are not permitted to access then this is vertical privilege escalation. For example, if a non-administrative user can gain access to an admin page where they can delete user accounts, then this is vertical privilege escalation.
+
+#### changing URL
+
+you can change the url it self to go to  a page you should not get it , like `website.com/admin`
+
