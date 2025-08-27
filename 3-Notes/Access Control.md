@@ -31,3 +31,11 @@ If a user can gain access to functionality that they are not permitted to access
 you can change the url it self to go to  a page you should not get it , like `website.com/admin`
 sometimes the link be unguessable  
 
+#### Parameter-based access control methods
+
+Some applications determine the user's access rights or role at login, and then store this information in a user-controllable location. This could be:
+
+- A hidden field.
+- A cookie.
+- A preset query string parameter.
+
