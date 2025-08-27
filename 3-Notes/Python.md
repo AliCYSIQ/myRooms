@@ -70,3 +70,5 @@ you can introduce this by [] like `list = ['anything', 1, 'ali']` and as you say
 you can change element in list in this way `list[0] = 'nothing'` and to add  a completely new one in the end , do this `list.append('tah')` and if you want  to add a new one but in specific position , do this `list.insert(0,'woow')` now it will be in the first and you can control the index 
 This operation shifts every other value in the list one position to the right.
 
+you can remove any element by using this `del list[0]` and you remove the last one by this `list.pop()` which will remove the last one 
+
