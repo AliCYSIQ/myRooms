@@ -31,4 +31,12 @@ The server that issues the token typically generates the signature by hashing th
 sometimes all you need to exploit it , just changing token in it like if you find `"sub": "carlos"`
 change it to `"sub": "Victim-name"` and see what will happen
 
-in some application it will refuse this because of signature  you can try to change `"arg":"RSA256"` to `"arg":"none"` which will let it pass it without verify the signature  
+in some application it will refuse this because of signature  you can try to change `"arg":"RSA256"` to `"arg":"none"` which will let it pass it without verify the signature 
+
+## Brute-forcing secret keys
+
+Some signing algorithms, such as HS256 (HMAC + SHA-256), use an arbitrary, standalone string as the secret key. Just like a password, it's crucial that this secret can't be easily guessed or brute-forced by an attacker. Otherwise, they may be able to create JWTs with any header and payload values they like, then use the key to re-sign the token with a valid signature.
+
+When implementing JWT applications, developers sometimes make mistakes like forgetting to change default or placeholder secrets. They may even copy and paste code snippets they find online, then forget to change a hardcoded secret that's provided as an example. In this case, it can be trivial for an attacker to brute-force a server's secret using a [wordlist of well-known secrets](https://github.com/wallarm/jwt-secrets/blob/master/jwt.secrets.list).
+
+
