@@ -128,6 +128,9 @@ and if you don't write a number it will start from start or end with the last on
 `print(list[:])` this will start from first one and end with the last one 
 don't forgot negative numbers like this `[-3:]` which will start from the third one from the end and end with the last one 
 
+can use it to make full copy of list  like this `new_list = list[:]` which will copy every element 
+
+
 ## for
 
 
