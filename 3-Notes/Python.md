@@ -170,3 +170,5 @@ it will be like this `list = [0,1,2,3,4,...,99]`and as we say the last number is
 A tuple looks just like a list, except you use parentheses instead of square
 brackets. Once you define a tuple, you can access individual elements by
 using each item’s index, just as you would for a list.
+it use as the list use but the different you can't change the elements in `tubles` 
+this is the only different 
