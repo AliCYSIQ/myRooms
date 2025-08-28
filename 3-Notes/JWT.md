@@ -27,3 +27,6 @@ The server that issues the token typically generates the signature by hashing th
 - Without knowing the server's secret signing key, it shouldn't be possible to generate the correct signature for a given header or payload.
 
 ###### **If you want to gain a better understanding of how JWTs are constructed, you can use the debugger on `jwt.io` to experiment with arbitrary tokens.**
+
+sometimes all you need to exploit it , just changing token in it like if you find `"sub": "carlos"`
+change it to `"sub": "Victim-name"` and see what will happen
