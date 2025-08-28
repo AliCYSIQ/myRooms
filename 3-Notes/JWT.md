@@ -30,3 +30,5 @@ The server that issues the token typically generates the signature by hashing th
 
 sometimes all you need to exploit it , just changing token in it like if you find `"sub": "carlos"`
 change it to `"sub": "Victim-name"` and see what will happen
+
+in some application it will refuse this because of signature  you can try to change `"arg":"RSA256"` to `"arg":"none"` which will let it pass it without verify the signature  
