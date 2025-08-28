@@ -114,6 +114,9 @@ you could use `min(list)` to get the smallest number and `max(list)` to get the 
 
 ### Comprehensions
 
+it let or it mean that you could use `for` loop inside list like this :
+`list = [i for i in range(0,100,2)]` instead of writing a more than 3 lines you can do it in one
+
 ## for
 
 
