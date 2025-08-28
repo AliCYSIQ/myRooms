@@ -162,3 +162,11 @@ it will be like this `list = [0,1,2,3,4,...,99]`and as we say the last number is
 
 `list = range(1,10,2)` here it will start with 1 and end in 9 but it will go 2 by 2 like this:
 `list = [1,3,5,7,9]`
+
+
+## Tubles
+
+**Defining a Tuple**
+A tuple looks just like a list, except you use parentheses instead of square
+brackets. Once you define a tuple, you can access individual elements by
+using each item’s index, just as you would for a list.
