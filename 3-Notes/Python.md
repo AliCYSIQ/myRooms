@@ -109,4 +109,34 @@ The reverse() method changes the order of a list permanently
 let you find the length of anything , and if it it use on list as now it will give how many element in it and if it use on normal string will find its length(how many letters in the word)
 
 
-49
+## for
+
+
+just the normal things i already knoow and this is the syntax
+```Python
+for i in list:
+	print(i)
+```
+
+#### range()
+it function use to make range between two numbers for example 
+```Python
+for i in range(1,100):
+	#do something
+```
+
+here it will go from 1 until 99 (last number is excluded)
+and can use variable in it like 
+```Python
+for i in range(len(list)):
+	#do something
+```
+
+##### **\*here we use `len()` to get the number of how many element in the list***
+now it will go from the first element until the last one
+
+`range()` can use anywhere not only in `for` loop like: `list = range(0,100)`
+it will be like this `list = [0,1,2,3,4,...,99]`and as we say the last number is **excluded** in range
+
+`list = range(1,10,2)` here it will start with 1 and end in 9 but it will go 2 by 2 like this:
+`list = [1,3,5,7,9]`
