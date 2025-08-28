@@ -72,5 +72,33 @@ Many websites implement important functions over a series of steps. This is comm
 - A variety of inputs or options need to be captured.
 - The user needs to review and confirm details before the action is performed.
 
+\
+For example, the administrative function to update user details might involve the following steps:
+
+1. Load the form that contains details for a specific user.
+2. Submit the changes.
+3. Review the changes and confirm.
 
 Sometimes, a website will implement rigorous access controls over some of these steps, but ignore others. Imagine a website where access controls are correctly applied to the first and second steps, but not to the third step. The website assumes that a user will only reach step 3 if they have already completed the first steps, which are properly controlled. An attacker can gain unauthorized access to the function by skipping the first two steps and directly submitting the request for the third step with the required parameters.
+
+### Referer-based access control
+
+Some websites base access controls on the `Referer` header submitted in the HTTP request. The `Referer` header can be added to requests by browsers to indicate which page initiated a request.
+
+for example if there's `/admin` and the website will send `403` if you try to access it , try go sub-page like `webiste/admin/deletUser` and to do that you need to change `Referer` header
+
+
+
+### Location-based access control
+
+Some websites enforce access controls based on the user's geographical location. This can apply, for example, to banking applications or media services where state legislation or business restrictions apply. These access controls can often be circumvented by the use of web proxies, VPNs, or manipulation of client-side geolocation mechanisms.
+
+
+## IDOR
+## What are insecure direct object references (IDOR)?
+
+Insecure direct object references (IDOR) are a type of access control vulnerability that arises when an application uses user-supplied input to access objects directly. The term IDOR was popularized by its appearance in the OWASP 2007 Top Ten. However, it is just one example of many access control implementation mistakes that can lead to access controls being circumvented. IDOR vulnerabilities are most commonly associated with horizontal privilege escalation, but they can also arise in relation to vertical privilege escalation.
+
+mostly depeaand on logic flaw and miscofinguration
+
+## reports
