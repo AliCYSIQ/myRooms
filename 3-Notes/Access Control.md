@@ -39,3 +39,5 @@ Some applications determine the user's access rights or role at login, and then 
 - A cookie.
 - A preset query string parameter.
 
+most of it just focus on the response or cookie 
+#### Broken access control resulting from platform misconfiguration
