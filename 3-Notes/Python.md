@@ -172,3 +172,7 @@ brackets. Once you define a tuple, you can access individual elements by
 using each item’s index, just as you would for a list.
 it use as the list use but the different you can't change the elements in `tubles` 
 this is the only different 
+
+
+
+70
