@@ -102,3 +102,73 @@ Insecure direct object references (IDOR) are a type of access control vulnerabil
 mostly depeaand on logic flaw and miscofinguration
 
 ## reports
+I pulled **actual HackerOne / Bugcrowd disclosures** and **public write-ups** (Medium, InfoSecWriteups, CybersecurityWriteups). Below are **15+** items: **10 platform disclosures** and **≥5 public write-ups**. I include a one-line impact note for each and the source so you can cite .
+
+---
+
+# Final answer — curated list (copy-paste friendly)
+
+## A) Platform disclosures (HackerOne / Bugcrowd) — **10** real reports
+
+1. **HackerOne — Report #2487889 — “Insecure Direct Object Reference”** — IDOR exposing private report metadata; platform disclosure page. ([HackerOne](https://hackerone.com/reports/2487889?utm_source=chatgpt.com "HackerOne | Report #2487889 - Insecure Direct Object Reference ..."))
+    
+2. **Bugcrowd — Unauthorized Team & Organization Creation via IDOR (Globe app)** — lack of userId validation in POST allowed unauthorized object creation. ([Bugcrowd](https://bugcrowd.com/disclosures/d8ed3e0d-923b-49a8-8a46-767d81fcd5c6/unauthorized-team-and-organization-creation-via-insecure-direct-object-reference-idor?utm_source=chatgpt.com "Unauthorized Team and Organization Creation via Insecure Direct ..."))
+    
+3. **HackerOne — Report #262661 — IDOR on Feedback/Review functionality** — create or manipulate public reviews via IDOR. ([HackerOne](https://hackerone.com/reports/262661?utm_source=chatgpt.com "Report #262661 - IDOR on HackerOne Feedback Review"))
+    
+4. **HackerOne — Report #46397 — Insecure Direct Object Reference vulnerability** — example disclosure showing impact on participant/notification flows. ([HackerOne](https://hackerone.com/reports/46397?utm_source=chatgpt.com "Report #46397 - Insecure Direct Object Reference vulnerability"))
+    
+5. **HackerOne — Report #120115 (Veris)** — critical IDOR enabling actions like deleting organisation members (high impact). ([HackerOne](https://hackerone.com/reports/120115?utm_source=chatgpt.com "Veris | Report #120115 - Critical - Insecure Direct Object Reference"))
+    
+6. **HackerOne — Report #751577 — IDOR allowed access to payments data of any user** — exposes financial information via object ID manipulation. ([HackerOne](https://hackerone.com/reports/751577?utm_source=chatgpt.com "Report #751577 - IDOR allow access to payments data of any user"))
+    
+7. **HackerOne — Report #358143 (Yelp)** — critical IDOR allowing manipulation/association of objects leading to serious business logic abuse. ([HackerOne](https://hackerone.com/reports/358143?utm_source=chatgpt.com "Yelp | Report #358143 - CRITICAL Insecure Direct Object Reference ..."))
+    
+8. **HackerOne — Report #2633771 — IDOR on AddTagToAssets operation** — API object reference vulnerability in asset/tag operations. ([HackerOne](https://hackerone.com/reports/2633771?utm_source=chatgpt.com "IDOR Vulnerability at AddTagToAssets operation name | HackerOne"))
+    
+9. **HackerOne — Report #126861 — IDOR on badoo.com** — classic IDOR disclosure on a mainstream service. ([HackerOne](https://hackerone.com/reports/126861?utm_source=chatgpt.com "Report #126861 - Insecure Direct Object Reference on badoo.com"))
+    
+10. **HackerOne/Bugcrowd — Atlassian / community.atlassian.com IDOR disclosure** — remove users or manipulate groups via IDOR; Bugcrowd published the disclosure summary. ([Bugcrowd](https://bugcrowd.com/disclosures/2fce1eaa-b482-4279-a7c8-8ca89cdad472/idor-remove-users-from-community-groups?utm_source=chatgpt.com "IDOR - remove users from community groups - Bugcrowd"))
+    
+
+> Notes: platform pages often redact bounty amounts — the important part is the public disclosure and impact description. Examples above include high-impact findings (account takeover, exposure of payment data, organisation/member deletion).
+
+---
+
+## B) Public write-ups / blog posts (Medium, InfoSecWriteups, CybersecurityWriteups) — **≥5**
+
+11. **InfoSecWriteups — “Hunting IDOR: A Deep Dive into Insecure Direct Object References”** — practical hunting tips + real examples. ([InfoSec Write-ups](https://infosecwriteups.com/%EF%B8%8F-hunting-idor-a-deep-dive-into-insecure-direct-object-references-b550a9f77333?utm_source=chatgpt.com "Hunting IDOR: A Deep Dive into Insecure Direct Object References"))
+    
+12. **InfoSecWriteups — “IDOR — my first P1 in Bug Bounty”** — personal writeup of finding & reporting a P1 IDOR; useful for PoC style. ([InfoSec Write-ups](https://infosecwriteups.com/idor-insecure-direct-object-references-my-first-p1-in-bugbounty-fb01f50e25df?utm_source=chatgpt.com "IDOR “Insecure direct object references”, my first P1 in Bugbounty"))
+    
+13. **CybersecurityWriteups — “Hacking My Way to $3,000: Unmasking a Sneaky IDOR”** — hands-on writeup with impact and payout described. ([Cyber Security Write-ups](https://cybersecuritywriteups.com/hacking-my-way-to-3-000-unmasking-a-sneaky-idor-vulnerability-%EF%B8%8F-%EF%B8%8F-06ebcb65ba9a?utm_source=chatgpt.com "Hacking My Way to $3000: Unmasking a Sneaky IDOR Vulnerability ..."))
+    
+14. **Medium — “All About Insecure Direct Object Reference (IDOR)” (Rohit Singh)** — solid primer + examples you can reference in notes. ([Medium](https://medium.com/%40insightfulrohit/all-about-insecure-direct-object-reference-idor-666cad6a94f0?utm_source=chatgpt.com "All About Insecure Direct Object Reference(IDOR) | by Rohit Singh"))
+    
+15. **Medium — “About IDOR (Insecure Direct Object Reference)” (Joko Purwanto)** — another clear explainer and hunting guide. ([Medium](https://medium.com/%40jokodfir/about-idor-insecure-direct-object-reference-929fa9e1b272?utm_source=chatgpt.com "About IDOR (Insecure Direct Object Reference) | by Joko Purwanto"))
+    
+16. **Medium — “Insecure Direct Object Reference (IDOR) Vulnerabilities” (technical overview)** — useful for mapping technique → impact ↔ remediation. ([Medium](https://medium.com/%40jetti.dinesh/insecure-direct-object-reference-idor-vulnerabilities-df551431eb7b?utm_source=chatgpt.com "Insecure Direct Object Reference (IDOR) Vulnerabilities - Medium"))
+    
+17. **InfoSecWriteups — “Critical IDOR vulnerability on Medium? — writeup/case study”** — case study style with concrete examples. ([InfoSec Write-ups](https://infosecwriteups.com/critical-idor-vulnerability-on-medium-f78346edbcb1?utm_source=chatgpt.com "Critical IDOR Vulnerability on Medium? - InfoSec Write-ups"))
+    
+
+---
+
+## C) Extra practical resources (learning → reporting)
+
+18. **Bugcrowd blog — “How-to: Find IDOR for large bounties”** — methodology for discovery & triage. ([Bugcrowd](https://www.bugcrowd.com/blog/how-to-find-idor-insecure-direct-object-reference-vulnerabilities-for-large-bounty-rewards/?utm_source=chatgpt.com "How-To: Find IDOR (Insecure Direct Object Reference ... - Bugcrowd"))
+    
+19. **PortsWigger Web Security Academy — IDOR lab** — canonical lab to practise object ID manipulation and access-control bypasses (great to pair with above write-ups). ([PortSwigger](https://portswigger.net/web-security/access-control/idor?utm_source=chatgpt.com "Insecure direct object references (IDOR) | Web Security Academy"))
+    
+
+---
+
+### Quick guidance on using these in your report pack
+
+- For each platform disclosure (A1–A10) paste the title + one-line impact (from the platform page) + link (use the platform page as evidence). I cited the platform pages above. ([HackerOne](https://hackerone.com/reports/2487889?utm_source=chatgpt.com "HackerOne | Report #2487889 - Insecure Direct Object Reference ..."), [Bugcrowd](https://bugcrowd.com/disclosures/d8ed3e0d-923b-49a8-8a46-767d81fcd5c6/unauthorized-team-and-organization-creation-via-insecure-direct-object-reference-idor?utm_source=chatgpt.com "Unauthorized Team and Organization Creation via Insecure Direct ..."))
+    
+- For each public write-up (B11–B17) include a short PoC excerpt and the bounty/payout if the author discloses it (some do — e.g., the $3,000 case in CybersecurityWriteups). ([Cyber Security Write-ups](https://cybersecuritywriteups.com/hacking-my-way-to-3-000-unmasking-a-sneaky-idor-vulnerability-%EF%B8%8F-%EF%B8%8F-06ebcb65ba9a?utm_source=chatgpt.com "Hacking My Way to $3000: Unmasking a Sneaky IDOR Vulnerability ..."))
+    
+
+---
+
