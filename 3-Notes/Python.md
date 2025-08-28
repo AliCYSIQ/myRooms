@@ -108,6 +108,11 @@ The reverse() method changes the order of a list permanently
 #### len(list)
 let you find the length of anything , and if it it use on list as now it will give how many element in it and if it use on normal string will find its length(how many letters in the word)
 
+### Numbers
+
+you could use `min(list)` to get the smallest number and `max(list)` to get the biggest number and `sum(list)` to get the the sum of all numbers in the list 
+
+### Comprehensions
 
 ## for
 
