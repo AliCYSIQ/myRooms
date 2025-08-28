@@ -54,3 +54,23 @@ X-Original-URL: /admin/deleteUser
 there's no `admin` in the URL so it will passed but the header here will let you perform `/admin/deleteUser`
 
 you need to see [portswigger access control](https://portswigger.net/web-security/access-control)
+
+
+
+### Horizontal privilege escalation
+Horizontal privilege escalation occurs if a user is able to gain access to resources belonging to another user, instead of their own resources of that type. For example, if an employee can access the records of other employees as well as their own, then this is horizontal privilege escalation.
+
+sometimes every user have its unique `id` and if this id was easy to guess like `?id=1` then this is a bug 
+other times it be hard to guess like (GU-IDs) This may prevent an attacker from guessing or predicting another user's identifier. However, the GU-IDs belonging to other users might be disclosed elsewhere in the application where users are referenced, such as user messages or reviews.
+
+in some application even if you have this `id` the application detect you here you need to see the response it will have the cookies of the users and you can use it to log-in 
+
+### Access control vulnerabilities in multi-step processes
+
+Many websites implement important functions over a series of steps. This is common when:
+
+- A variety of inputs or options need to be captured.
+- The user needs to review and confirm details before the action is performed.
+
+
+Sometimes, a website will implement rigorous access controls over some of these steps, but ignore others. Imagine a website where access controls are correctly applied to the first and second steps, but not to the third step. The website assumes that a user will only reach step 3 if they have already completed the first steps, which are properly controlled. An attacker can gain unauthorized access to the function by skipping the first two steps and directly submitting the request for the third step with the required parameters.
