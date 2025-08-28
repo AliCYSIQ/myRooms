@@ -52,3 +52,5 @@ POST / HTTP/1.1
 X-Original-URL: /admin/deleteUser
 ```
 there's no `admin` in the URL so it will passed but the header here will let you perform `/admin/deleteUser`
+
+you need to see [portswigger access control](https://portswigger.net/web-security/access-control)
