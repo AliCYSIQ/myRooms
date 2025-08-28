@@ -108,14 +108,25 @@ The reverse() method changes the order of a list permanently
 #### len(list)
 let you find the length of anything , and if it it use on list as now it will give how many element in it and if it use on normal string will find its length(how many letters in the word)
 
-### Numbers
 
-you could use `min(list)` to get the smallest number and `max(list)` to get the biggest number and `sum(list)` to get the the sum of all numbers in the list 
 
-### Comprehensions
+#### min(list)
+to get the smallest number 
+#### max(list) 
+to get the biggest number  
+#### sum(list) 
+to get the the sum of all numbers in the list 
+
+#### Comprehensions
 
 it let or it mean that you could use `for` loop inside list like this :
 `list = [i for i in range(0,100,2)]` instead of writing a more than 3 lines you can do it in one
+
+#### Slicing
+which let you slice  a list like this `print(list[0:3])` it will start from start until 2 like this `0,1,2`
+and if you don't write a number it will start from start or end with the last one like this
+`print(list[:])` this will start from first one and end with the last one 
+don't forgot negative numbers like this `[-3:]` which will start from the third one from the end and end with the last one 
 
 ## for
 
