@@ -41,3 +41,14 @@ Some applications determine the user's access rights or role at login, and then 
 
 most of it just focus on the response or cookie 
 #### Broken access control resulting from platform misconfiguration
+some website might configure rules like this one:
+
+`DENY: POST, /admin/deleteUser, managers`
+
+This rule denies access to the `POST` method on the URL `/admin/deleteUser`, for users in the managers group. Various things can go wrong in this situation, leading to access control bypasses.
+it will deny it if `/admin/deleteUser` in the URL  but some of them let you do this 
+```
+POST / HTTP/1.1 
+X-Original-URL: /admin/deleteUser
+```
+there's no `admin` in the URL so it will passed but the header here will let you perform `/admin/deleteUser`
