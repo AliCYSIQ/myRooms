@@ -203,3 +203,9 @@ the first `arg` is **the key**
 the second `arg` is `the message`
 
 
+#### items() 
+to make loop inside Dictionaries you need to use  `items()` and `two arg` like this:
+```python
+for key,value in ahmed.items();
+	print(f"key{key}:value{value}")
+```
