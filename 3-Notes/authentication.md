@@ -124,7 +124,7 @@ source : [link](https://medium.com/%40sharp488/critical-account-takeover-mfa-aut
 _____
 you can bypass 2FA by removing `CSRF` token and it will send you to page with 
 `invaild csrf tocken`  all you need here just change the URL to any other page like `setteings`
-you can see it [here](https://youtu.be/NJyN7Ys7BC4)
+you can watch in [youtube](https://youtu.be/NJyN7Ys7BC4) 
 
 _____
 
