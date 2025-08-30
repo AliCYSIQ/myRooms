@@ -175,3 +175,13 @@ this is the only different
 
 
 ## Dictionaries
+Python’s dictionaries, which allow you to connect pieces of related information. You’ll learn how to access the information once it’s in a dictionary and how to modify that information. Because dictionaries can store an almost limitless amount of information
+#### Working with Dictionaries
+A dictionary in Python is a collection of key-value pairs. Each key is connected to
+a value, and you can use a key to access the value associated with that key. A
+key’s value can be a number, a string, a list, or even another dictionary. In fact,
+you can use any object that you can create in Python as a value in a dictionary.
+In Python, a dictionary is wrapped in braces (`{}`) with a series of key-value
+pairs inside the braces, for example :
+
+`ahmed = {'name': 'ahmed ali','age':19,'country':'iraq'}`
