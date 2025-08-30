@@ -209,3 +209,9 @@ to make loop inside Dictionaries you need to use  `items()` and `two arg` like t
 for key,value in ahmed.items();
 	print(f"key{key}:value{value}")
 ```
+
+#### keys()
+it will let you making loop inside the keys only, and you can do that without it
+
+#### values()
+it will let you making loop inside the values only
