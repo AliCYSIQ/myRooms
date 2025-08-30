@@ -59,12 +59,14 @@ now for different time , every time the username is **invalid** the response tim
 
 some time if you try to sign in 3 times and all of them are fails the website will block you for some minute  but if you try to sign in 2 times and fails then sign in for the 3 time was correct the counter of attempt will reset which will be logic flaw because you can do 2 random sign in (to get the victim account) then sign in with your account and by this you can make brute force 
 
+sometimes every work good and as it should be , but if you try to login the request that have the password in `json` so you cant change it from `"password": "wowmy"` 
+to `"password": ["p1","p2",...]` which will try to use all the passwords in one request
 
 
 ## Vulnerabilities in multi-factor authentication
 Many websites rely exclusively on single-factor authentication using a password to authenticate users. However, some require users to prove their identity using multiple authentication factors.
 
-first vulnerability you may face is you can bypass 2 factor authentication by just drop the request of  2FA , for example you sign in after that it ask for 2FA you can just drop the request (using burp) then go to your account page and it will let you in , or you can just when arriving to the OTP step just enter `website.com/dashbord` instead of the origin URL
+first vulnerability you may face is you can bypass 2 factor authentication by just drop the request of  2FA , for example you sign in after that it ask for 2FA you can just drop the request (using burp) then go to your account page and it will let you in , or you can just when arriving to the OTP step just enter `website.com/dashboard` instead of the 2FA URL
 ___
 some times the website do not verify if you were the same user or no in 2FA for example
 ```
@@ -80,7 +82,7 @@ and if it let try without limit , then this is full account takeover
 ____
 
 sometimes when you try to enter 2FA code it will let you try just two or three times then it will let you out and this is the only way the website use as protection against Burt force which is vulnerable
-all you need to use is macros (i will write about it later)
+all you need to use is macros (i will write about macros later)
 _______
 sometimes all you need to do it is just let blank , for example in 2FA holder you write `1111` then using `burp` remove it and let it blank(nothing written) and send the request and it will be passed and you will be login
 _____
