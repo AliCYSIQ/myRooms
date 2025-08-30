@@ -185,3 +185,14 @@ In Python, a dictionary is wrapped in braces (`{}`) with a series of key-value
 pairs inside the braces, for example :
 
 `ahmed = {'name': 'ahmed ali','age':19,'country':'iraq'}`
+
+you can add or edit by this : 
+edit: `ahmed['name']= 'ahmed ali thaseen`
+add: `ahmed['have_sisters']=true`
+
+`new_age = ahmed['age']+ 5`
+this mean `19+5` 
+
+you can use `del` to remove key and its value 
+
+
