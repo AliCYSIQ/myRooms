@@ -175,6 +175,7 @@ this is the only different
 
 
 ## Dictionaries
+
 Python’s dictionaries, which allow you to connect pieces of related information. You’ll learn how to access the information once it’s in a dictionary and how to modify that information. Because dictionaries can store an almost limitless amount of information
 #### Working with Dictionaries
 A dictionary in Python is a collection of key-value pairs. Each key is connected to
@@ -194,5 +195,11 @@ add: `ahmed['have_sisters']=true`
 this mean `19+5` 
 
 you can use `del` to remove key and its value 
+
+#### get()
+it use to get a value of key and if this doesn't exists it will show a message
+`ahmed.get('aga','there's nothing from what you say)` 
+the first `arg` is **the key**
+the second `arg` is `the message`
 
 
