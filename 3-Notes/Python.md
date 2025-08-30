@@ -174,5 +174,4 @@ it use as the list use but the different you can't change the elements in `tuble
 this is the only different 
 
 
-
-70
+## Dictionaries
