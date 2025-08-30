@@ -52,8 +52,9 @@ like some tell you if the username is the wrong or the password , which is big m
 but some of them fix this by telling you every time `username or password is wrong.`
 you can try to input **true username** and see what will happened and when i do this , this is what happened `usernamme or password is wrong` it the same but not it is not , there is no `.` in the end which mean it different response and this is logic flew lead to brute force 
 
-and some of them depaend of the time of the responce 
-
+and some of them depend of the time of the response 
+`X-Forwarded-For` let you spoof your ip in website and bypass **ip-block-protection**
+now for different time , every time the username is **invalid** the response time will be the same (or close to be the same) but if it valid it will be different depend on the password length so you can let the password like 100-length and enumerate he username then see what the different in time response or the most length one , mostly it will be the valid username, then you can enumerate the passwords  and use `X-Forwarded-For` to **bypass internet address block**
 [need to complete from here](https://portswigger.net/web-security/authentication/password-based#Flawed%20brute-force%20protection)
 
 some time if you try to sign in 3 times and all of them are fails the website will block you for some minute  but if you try to sign in 2 times and fails then sign in for the 3 time was correct the counter of attempt will reset which will be logic flaw because you can do 2 random sign in (to get the victim account) then sign in with your account and by this you can make brute force 
