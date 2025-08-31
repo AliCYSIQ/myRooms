@@ -90,7 +90,14 @@ and to make sure you can use your password, [portswigger lab](https://portswigge
 
 and with the same bug and if there's `xss` you can capture user cookie like  `stay-logged-in`
 and you can try to guess the password offline 
+
+____
+sometimes when try to change your password it will send a link to rest your password when youu enter the new password the request will have `token=...&username=...&password=...&Cpassword=...` you can remove the **token value** in request and the url and change the username to the victim name 
+**NOTE** need to remove the value only and let it like this `token=&username=....`
+
+___
 ### Reports
+
 sometimes all you need to do it is just let blank , for example in 2FA holder you write `1111` then using `burp` remove it and let it blank(nothing written) and send the request and it will be passed and you will be login
 _____
  good i dont know how to explain it but this is the [link](https://hackerone.com/reports/2885636)
