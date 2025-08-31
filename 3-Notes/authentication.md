@@ -84,6 +84,13 @@ ____
 sometimes when you try to enter 2FA code it will let you try just two or three times then it will let you out and this is the only way the website use as protection against Burt force which is vulnerable
 all you need to use is macros (i will write about macros later)
 _______
+sometimes there's cookies like `stay-logged-in` that you can know how it make and try to make one for other user like this if you decode `stay-logged-in` from base64 it will be like this 
+**`wiener:51dc30ddc473d43a6011e9ebba6ca770`** so you can it made like this `usernmae:password`
+and to make sure you can use your password, [portswigger lab](https://portswigger.net/web-security/authentication/other-mechanisms/lab-brute-forcing-a-stay-logged-in-cookie)
+
+and with the same bug and if there's `xss` you can capture user cookie like  `stay-logged-in`
+and you can try to guess the password offline 
+### Reports
 sometimes all you need to do it is just let blank , for example in 2FA holder you write `1111` then using `burp` remove it and let it blank(nothing written) and send the request and it will be passed and you will be login
 _____
  good i dont know how to explain it but this is the [link](https://hackerone.com/reports/2885636)
