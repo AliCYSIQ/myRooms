@@ -98,6 +98,7 @@ sometimes when try to change your password it will send a link to rest your pass
 ___
 same bug as before but this time there's no username to change , [portswigger lab](https://portswigger.net/web-security/authentication/other-mechanisms/lab-password-reset-poisoning-via-middleware)
 
+another one [lab](https://portswigger.net/web-security/authentication/other-mechanisms/lab-password-brute-force-via-password-change)
 ___
 
 ___
