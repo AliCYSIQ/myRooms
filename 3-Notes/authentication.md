@@ -96,6 +96,11 @@ sometimes when try to change your password it will send a link to rest your pass
 **NOTE** need to remove the value only and let it like this `token=&username=....`
 
 ___
+same bug as before but this time there's no username to change , [portswigger lab](https://portswigger.net/web-security/authentication/other-mechanisms/lab-password-reset-poisoning-via-middleware)
+
+___
+
+___
 ### Reports
 
 sometimes all you need to do it is just let blank , for example in 2FA holder you write `1111` then using `burp` remove it and let it blank(nothing written) and send the request and it will be passed and you will be login
