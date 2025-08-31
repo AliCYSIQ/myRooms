@@ -219,3 +219,6 @@ it will let you making loop inside the values only
 #### sorted()
 you can use it sort a Dictionaries like this : `dic_sorted = sorted(ahmed.keys())`
 **you can use it directly in loop if you want**
+
+
+109
