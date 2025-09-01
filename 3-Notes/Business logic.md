@@ -11,3 +11,5 @@ Business logic vulnerabilities often arise because the design and development te
 ## Excessive trust in client-side controls
 
 A fundamentally flawed assumption is that users will only interact with the application via the provided web interface. This is especially dangerous because it leads to the further assumption that client-side validation will prevent users from supplying malicious input. However, an attacker can simply use tools such as Burp Proxy to tamper with the data after it has been sent by the browser but before it is passed into the server-side logic. This effectively renders the client-side controls useless.
+
+for example if you have store and you add one proodect then intrupt this requuest using burp there you can change the  price of  this prodect which will let you get for free or juust one doller [thisis the lab](https://portswigger.net/web-security/logic-flaws/examples/lab-logic-flaws-excessive-trust-in-client-side-controlsv)
