@@ -225,4 +225,15 @@ you can make nested dictionaries like Dictionaries inside Dictionaries or Dictio
 
 ## inputs
 
-####
+#### input()
+use it to take inputs for user and you can  save it as  variable and can add message into it
+`name = input("please enter your name: ")` 
+#### int()
+use to convert string to integer like this 
+```python
+age = input("enter your age: ")
+age = int(age)
+...
+...
+```
+because every time you use `input()` it will take it as string
