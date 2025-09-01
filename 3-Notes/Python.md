@@ -228,6 +228,13 @@ you can make nested dictionaries like Dictionaries inside Dictionaries or Dictio
 #### input()
 use it to take inputs for user and you can  save it as  variable and can add message into it
 `name = input("please enter your name: ")` 
+or 
+```python
+message = "enter your name"
+name = inpuut(message)
+
+```
+
 #### int()
 use to convert string to integer like this 
 ```python
