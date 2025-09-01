@@ -188,7 +188,7 @@ pairs inside the braces, for example :
 `ahmed = {'name': 'ahmed ali','age':19,'country':'iraq'}`
 
 you can add or edit by this : 
-edit: `ahmed['name']= 'ahmed ali thaseen`
+edit: `ahmed['name']= 'ahmed ali thaseen'`
 add: `ahmed['have_sisters']=true`
 
 `new_age = ahmed['age']+ 5`
@@ -221,4 +221,8 @@ you can use it sort a Dictionaries like this : `dic_sorted = sorted(ahmed.keys()
 **you can use it directly in loop if you want**
 
 
-109
+you can make nested dictionaries like Dictionaries inside Dictionaries or Dictionaries inside list or list inside Dictionaries then you need to use loop for every one 
+
+## inputs
+
+####
