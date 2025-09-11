@@ -152,3 +152,5 @@ If working with a blind SSRF where no output is reflected back to you, you'll ne
 
 
 ## reports
+
+iif there's parameter like `url=` or anything like it , you can try this 
