@@ -164,6 +164,11 @@ what payload will look like:
 ```
 
 
+### Exploiting XXE to perform SSRF attacks
+
+
+
+
 ### In-Band vs Out-of-Band XXE
 
 In-band XXE refers to an XXE vulnerability where the attacker can see the response from the server. This allows for straightforward data exfiltration and exploitation. The attacker can simply send a malicious XML payload to the application, and the server will respond with the extracted data or the result of the attack.
