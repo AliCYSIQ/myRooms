@@ -149,6 +149,21 @@ Several XML parsers are used across different programming environments; each par
 - **StAX (Streaming API for XML) Parser**: Similar to SAX, StAX parses XML documents in a streaming fashion but gives the programmer more control over the XML parsing process.
 - **XPath Parser**: Parses an XML document based on expression and is used extensively in conjunction with XSLT.
 
+###  Exploiting XXE to retrieve files
+
+how to do it :
+- Introduce (or edit) a `DOCTYPE` element that defines an external entity containing the path to the file.
+- Edit a data value in the XML that is returned in the application's response, to make use of the defined external entity.
+
+
+
+what payload will look like:
+```XXE
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE foo [ <!ENTITY xxe SYSTEM "file:///etc/passwd"> ]> <stockCheck><productId>&xxe;</productId></stockCheck>
+```
+
+
 ### In-Band vs Out-of-Band XXE
 
 In-band XXE refers to an XXE vulnerability where the attacker can see the response from the server. This allows for straightforward data exfiltration and exploitation. The attacker can simply send a malicious XML payload to the application, and the server will respond with the extracted data or the result of the attack.
