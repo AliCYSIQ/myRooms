@@ -264,3 +264,27 @@ This DTD carries out the following steps:
 - Defines an XML parameter entity called `eval`, containing a dynamic declaration of another XML parameter entity called `error`. The `error` entity will be evaluated by loading a nonexistent file whose name contains the value of the `file` entity.
 - Uses the `eval` entity, which causes the dynamic declaration of the `error` entity to be performed.
 - Uses the `error` entity, so that its value is evaluated by attempting to load the nonexistent file, resulting in an error message containing the name of the nonexistent file, which is the contents of the `/etc/passwd` file.
+
+
+### XXE for Remote Code Execution (RCE)
+
+
+#### **A. PHP `expect` Wrapper (The Classic Example)**
+
+This is the most famous example, but it requires the PHP `expect` extension to be installed and enabled (it is **not** by default).
+
+**Concept:** The PHP `expect` wrapper allows interaction with processes. You can use it within an XXE to execute a system command.
+
+**Exploitation:**
+    
+```
+
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE foo [
+<!ENTITY xxe SYSTEM "expect://id" >
+]>
+<root>&xxe;</root>
+```
+	
+
+- **Why it often fails:** The `expect` extension is niche. You'll almost never find it in modern setups. **Consider this a historical technique**, but one you must know.
