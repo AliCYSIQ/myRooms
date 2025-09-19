@@ -16,3 +16,7 @@ assetfinder --subs-only indrive.com | tee assetfinder.txt
 
 
 https://freedium.cfd/https://infosecwriteups.com/recon-to-master-the-complete-bug-bounty-checklist-95b80ea55ff0
+
+```
+amass enum -d indrive.com,indriver.com,aws.indriverapp.com,indriverapp.com -active -config ~/.config/amass/config.yaml | cut -d']' -f 2 | awk '{print $1}' | sort -u > amass.txt
+```
