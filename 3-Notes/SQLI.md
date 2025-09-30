@@ -34,5 +34,20 @@ A relational database stores data in named tables that follow a schema (a struct
 
 
 
+### commands 
 
+take some commands that will be helpful and sql commands are not case-sensitive and it should end with semicolon`;` 
+#### **SELECT**
+it use to retrieve data from database 
+  
+**`select * from users;`**
+`select`: retrieve data from database
+`*`: it mean what you want to retrieve and here it mean every thing
+`from`:from mean from.
+`users`: it mean the name of the table that you want to retrieve (select)
+`;`: it use in the end of every command
 
+**SO here it mean it will retrieve everything (all columns and rows) from users table **
+
+`select username,password from users;`
+which will mean retrieve username and password from 
