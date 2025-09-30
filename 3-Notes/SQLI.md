@@ -39,7 +39,8 @@ A relational database stores data in named tables that follow a schema (a struct
 take some commands that will be helpful and sql commands are not case-sensitive and it should end with semicolon`;` 
 #### **SELECT**
 it use to retrieve data from database 
-  
+
+![[Pasted image 20250930153454.png]]  
 **`select * from users;`**
 `select`: retrieve data from database
 `*`: it mean what you want to retrieve and here it mean every thing
@@ -50,4 +51,30 @@ it use to retrieve data from database
 **SO here it mean it will retrieve everything (all columns and rows) from users table **
 
 `select username,password from users;`
-which will mean retrieve username and password from 
+which will mean retrieve username and password from users table instead of everything like `*` do
+
+`select * from users LIMIT 1;`
+t as the first one will retrieve everything but only the first row, if you change `LIMIT` to `LIMIT 1,1` which mean it will retrieve the second row and so in `LIMIT 1,1` first number show how many rows will skip and the second will show how many will show after the skip ones
+
+
+`select * from users where username='admin';`
+
+here it will show everything as well but only in the row that the column username equal `admin`
+but if we write not equal instead of equal like this `username !='admin'` this mean it will show everything except the row that its username column equal to `admin`  
+
+
+`select * from users where username='admin' or username='jon';`
+This will only return the rows where the username is either equal to **admin** or **jon**.
+
+`select * from users where username='admin' and password='p4ssword';`
+This will only return the rows where the username is equal to **admin** and the password is equal to **p4ssword**.
+
+
+Using the like clause allows you to specify data that isn't an exact match but instead either starts, contains or ends with certain characters by choosing where to place the wildcard character represented by a percentage sign %.
+
+`select * from users where username like 'a%';`
+
+so here it will show `admin` because it have `a` in the start(if there's more than one that have `a` in it , it will show all of them,in the start only ) 
+
+if change it to ``
+
