@@ -29,28 +29,10 @@ The second tier is the middleware, which interprets these events and puts them i
 
 Databases, in general, are categorized into `Relational Databases` and `Non-Relational Databases`. Only Relational Databases utilize SQL, while Non-Relational databases utilize a variety of methods for communications.
 
-## Relational Databases
-
-A relational database is the most common type of database. It uses a schema, a template, to dictate the data structure stored in the database. For example, we can imagine a company that sells products to its customers having some form of stored knowledge about where those products go, to whom, and in what quantity. However, this is often done in the back-end and without obvious informing in the front-end. Different types of relational databases can be used for each approach. For example, the first table can store and display basic customer information, the second the number of products sold and their cost, and the third table to enumerate who bought those products and with what payment data.
-
+# Relational databases
+A relational database stores data in named tables that follow a schema (a structure that defines columns and types). Each table has columns (vertical fields) and rows (horizontal records). Tables should have unique names within the same database; columns should have unique names within their table. Data is linked across tables using keys (for example, a primary key in one table and a foreign key in another), which keeps relationships explicit and consistent.
 
 
 
 
 
-
-## **Blind Injection**
-Bind SQLI happen because there's a bug (**SQLI**) but it isn't show in the response  and that could happen because of the injection plan like sometimes it is sometime happen in cookie but we can know from how the response act like , let's say a website show welcome back if everything work , so from this we can do this 
-```
-…xyz' AND '1'='1 
-…xyz' AND '1'='2
-```
-
-- The first of these values causes the query to return results, because the injected `AND '1'='1` condition is true. As a result, the "Welcome back" message is displayed.
-- The second value causes the query to not return any results, because the injected condition is false. The "Welcome back" message is not displayed.
-
-to know if certain  table exists and that by this payload 
-`' AND (SELECT 'a' FROM users LIMIT 1)='a'`  if `WelcomeBack` message show up that's mean there's table with this name and if not you need to continue your search 
-
-and we can use this payload
-`' AND SUBSTRING((SELECT password FROM users WHERE username='administrator'),1,1) > m` if Welcome back show up then first char is after `m` and if not it maybe be `m` or earlier (less) 
