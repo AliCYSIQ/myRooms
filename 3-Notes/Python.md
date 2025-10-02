@@ -265,3 +265,5 @@ age = int(age)
 ...
 ```
 because every time you use `input()` it will take it as string
+
+## laybary
