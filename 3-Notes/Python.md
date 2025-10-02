@@ -266,4 +266,35 @@ age = int(age)
 ```
 because every time you use `input()` it will take it as string
 
-## laybary
+## libraries 
+
+### argparse
+
+**NOTE : this [link](https://docs.python.org/3/library/argparse.html#module-argparse) is docs from python that really useful when need something that not here (when learn new thing, add it here )**
+
+#### the start 
+first thing is import the library then you need to add this 
+```python
+import argparse as arg
+
+parser = arg.ArgumentParser() # it make it container and it's required 
+```
+to make it the container and it have some argument specifications 
+```python
+parser = argparse.ArgumentParser(
+		  prog='ProgramName',
+          description='What the program does',
+          epilog='Text at the bottom of help')
+```
+
+then  `add_argument` to add some argument like this 
+```python
+1 parser.add_argument('filename')           # positional argument
+2 parser.add_argument('-c', '--count')      # option that takes a value
+3 parser.add_argument('-v', '--verbose',
+                      action='store_true')  # on/off flag
+```
+
+in firstt line it add argument and you can add it or no,
+in  second it add another argument and it have two names but both do the same
+in third 
