@@ -303,3 +303,8 @@ in third  it have `action=` which have option one of them is `'store_true'` it m
 **`add_argument()`** could have more option like `help=''` it will add discretion to every argument when show the help menu
 
 there's **`type=`** if there's argument that should take as integer only or  string or etc 
+
+The `ArgumentParser.parse_args()` method runs the parser and places the extracted data in a `argparse.Namespace` object:
+```python
+args : arg.Namespace = parser.parse_args()
+```
