@@ -295,6 +295,11 @@ then  `add_argument` to add some argument like this
                       action='store_true')  # on/off flag
 ```
 
-in firstt line it add argument and you can add it or no,
+in first line it add argument and you can add it or no,
 in  second it add another argument and it have two names but both do the same
-in third 
+in third  it have `action=` which have option one of them is `'store_true'` it mean if it added then it will be `true` and if not will be false
+**other `action`** option like **`action='count'`** which will count how many times will the argument write like `-v` here it will take it as **1** and `-vv` will be **2** 
+
+**`add_argument()`** could have more option like `help=''` it will add discretion to every argument when show the help menu
+
+there's **`type=`** if there's argument that should take as integer only or  string or etc 
