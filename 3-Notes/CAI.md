@@ -195,4 +195,3 @@ CAI> I have found an IDOR vulnerability at the endpoint `https://api.target.com/
 *   **Documentation & Reporting:** It automates the most tedious part of the job: writing reports.
 
 Start with the basic commands, practice by giving it files via the workspace, and gradually let it take over more of the orchestration. You will quickly find it becomes an indispensable partner in your bug hunting process. 
-AIzaSyDUPLFtk3_8vU6l794A6SK0PDkzF0EJff0
