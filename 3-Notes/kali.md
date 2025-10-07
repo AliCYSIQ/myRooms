@@ -2,5 +2,4 @@
 
 source :[tclc book](https://linuxcommand.org/tlcl.php)
 
-page 60
-	
+command `cp` use with it `-v` to make it verbose and `-i` to make it interactive
