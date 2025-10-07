@@ -20,4 +20,7 @@ using boolean to retrieving hidden data  using payloads like this
 
 it use something like `--` (which will comment what after it )
 it can add after username to comment the password and will cause login using only username `username = administrator'--&password = p@ass4word` 
-even if the password was worng
+even if the password was wrong
+
+
+##### Retrieving data from other database tables
