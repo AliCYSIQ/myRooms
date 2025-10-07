@@ -11,3 +11,5 @@ using [[sqlmap]] will save a lots
 - use payloads that can cause time delay , [payloads](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/SQL%20Injection) 
 - use payloads that made out-of-band interaction , [payloads](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/SQL%20Injection) 
 
+
+
