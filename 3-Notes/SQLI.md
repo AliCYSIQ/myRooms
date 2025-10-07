@@ -61,3 +61,8 @@ after knowing all of these we need to use this to exploit it
 assuming there's table called **`users`** and have different columns one of them is **`username`** and the other one is **`password`**,  here you can use this payload to retrieve their info:
 `' UNION SELECT username, password FROM users--`
 
+when needs to retrieve two columns and only have one column that can retrieve string , here you have two option 
+- retrieve one after one , not together
+- use this payload to retrieve two columns in one column
+  `' UNION SELECT username || '~' || password FROM users--`
+
