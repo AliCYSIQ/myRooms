@@ -37,4 +37,107 @@ Nmap done: 1 IP address (1 host up) scanned in 37.77 seconds
 
 ```
 
-this what port `80` and `443` look like 
+this what port `80` and `443` look like:
+`http://10.10.10.22:80/`
+![[Pasted image 20251008120944.png]]
+
+`http://10.10.10.22:443/`
+![[Pasted image 20251008121041.png]]
+
+until now there's nothing , so i run this command **`sslscan 10.10.10.22`**
+and the result was like this
+```python
+Version: 2.1.5
+OpenSSL 3.5.3 16 Sep 2025
+
+Connected to 10.10.10.22
+
+Testing SSL server 10.10.10.22 on port 443 using SNI name 10.10.10.22
+
+  SSL/TLS Protocols:
+SSLv2     disabled
+SSLv3     disabled
+TLSv1.0   enabled
+TLSv1.1   enabled
+TLSv1.2   enabled
+TLSv1.3   disabled
+
+  TLS Fallback SCSV:
+Server supports TLS Fallback SCSV
+
+  TLS renegotiation:
+Secure session renegotiation supported
+
+  TLS Compression:
+Compression disabled
+
+  Heartbleed:
+TLSv1.2 not vulnerable to heartbleed
+TLSv1.1 not vulnerable to heartbleed
+TLSv1.0 not vulnerable to heartbleed
+
+  Supported Server Cipher(s):
+Preferred TLSv1.2  256 bits  ECDHE-RSA-AES256-GCM-SHA384   Curve P-256 DHE 256
+Accepted  TLSv1.2  256 bits  DHE-RSA-AES256-GCM-SHA384     DHE 2048 bits
+Accepted  TLSv1.2  128 bits  ECDHE-RSA-AES128-GCM-SHA256   Curve P-256 DHE 256
+Accepted  TLSv1.2  128 bits  DHE-RSA-AES128-GCM-SHA256     DHE 2048 bits
+Accepted  TLSv1.2  256 bits  ECDHE-RSA-AES256-SHA384       Curve P-256 DHE 256
+Accepted  TLSv1.2  256 bits  DHE-RSA-AES256-SHA256         DHE 2048 bits
+Accepted  TLSv1.2  256 bits  ECDHE-RSA-AES256-SHA          Curve P-256 DHE 256
+Accepted  TLSv1.2  256 bits  DHE-RSA-AES256-SHA            DHE 2048 bits
+Preferred TLSv1.1  256 bits  ECDHE-RSA-AES256-SHA          Curve P-256 DHE 256
+Accepted  TLSv1.1  256 bits  DHE-RSA-AES256-SHA            DHE 2048 bits
+Preferred TLSv1.0  256 bits  ECDHE-RSA-AES256-SHA          Curve P-256 DHE 256
+Accepted  TLSv1.0  256 bits  DHE-RSA-AES256-SHA            DHE 2048 bits
+
+  Server Key Exchange Group(s):
+TLSv1.2  141 bits  sect283k1
+TLSv1.2  141 bits  sect283r1
+TLSv1.2  204 bits  sect409k1
+TLSv1.2  204 bits  sect409r1
+TLSv1.2  285 bits  sect571k1
+TLSv1.2  285 bits  sect571r1
+TLSv1.2  128 bits  secp256k1
+TLSv1.2  128 bits  secp256r1 (NIST P-256)
+TLSv1.2  192 bits  secp384r1 (NIST P-384)
+TLSv1.2  260 bits  secp521r1 (NIST P-521)
+TLSv1.2  128 bits  brainpoolP256r1
+TLSv1.2  192 bits  brainpoolP384r1
+TLSv1.2  256 bits  brainpoolP512r1
+
+  SSL Certificate:
+Signature Algorithm: sha256WithRSAEncryption
+RSA Key Strength:    3072
+
+Subject:  europacorp.htb
+Altnames: DNS:www.europacorp.htb, DNS:admin-portal.europacorp.htb
+Issuer:   europacorp.htb
+
+Not valid before: Apr 19 09:06:22 2017 GMT
+Not valid after:  Apr 17 09:06:22 2027 GMT
+
+```
+
+as you see it found two Alt-names one is `www.europacorp.htb` and the other one is 
+`admin-portal.europacorp.htb` admin portal is the most valuable so i will add it to `/etc/hosts`
+
+after going to **`https://admin-portal.europacorp.htb/`** it will show us login page 
+![[Pasted image 20251008121818.png]]
+
+here after try some sqli payloads , i found i can login without need the password but i dont have the email and i need to found it 
+i found this email **`admin@europacorp.htb`**
+how?
+
+![[Pasted image 20251008122350.png]]
+click on lock then press `connection` 
+then click on `more information`
+then `view certificate`
+will show some info , i found the email there
+
+#### use sqli to login
+to login i use burp to intercept the login request and i change the `POST` data to this 
+**`email=admin%40europacorp.htb'-- -&password=ddddwoowo`**  
+now i'm in
+i was in dashboard after crawling i found this `https://admin-portal.europacorp.htb/tools.php` that could let me in the machine 
+![[Pasted image 20251008123253.png]]
+
