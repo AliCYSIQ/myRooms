@@ -40,5 +40,6 @@ now lets see if  can inject boolean or no and to do that we will send two reques
 
 **`https://insecure-website.com/product/lookup?category=fizzy'+%26%26+1+%26%26+'x`**
 
-check for different in response 
+check for different in response or behave 
 
+----
