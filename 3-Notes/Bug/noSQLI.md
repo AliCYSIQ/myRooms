@@ -53,3 +53,13 @@ This results in the following MongoDB query:
 `this.category == 'fizzy'||'1'=='1'`
 
 As the injected condition is always true, the modified query returns all items. This enables you to view all the products in any category, including hidden or unknown categories.
+
+----
+[lab](https://portswigger.net/web-security/nosql-injection/lab-nosql-injection-detection)
+when choosing category or filter then add `'` it will cause error which will show on the screen and if we made it like this `'+'` (after encode it )the error will disappears  , if we try to use this payload  `' && 0 && 'x` (after encode it) it will not show anything ,and if we use this `' && 1 && 'x` it will show all product that related to the filter , so here we **know that it is vulnerable to injection**
+
+then this payload `'||1||'` and it show all the product even the unreleased ones
+
+(make sure to URL-encode all of these payloads before using)
+
+----
