@@ -42,7 +42,7 @@ this what port `80` and `443` look like:
 ![[Pasted image 20251008120944.png]]
 
 `http://10.10.10.22:443/`
-![[Pasted image 20251008121041.png]]
+![[Pasted image 20251008121041 1.png]]
 
 until now there's nothing , so i run this command **`sslscan 10.10.10.22`**
 and the result was like this
@@ -122,13 +122,13 @@ as you see it found two Alt-names one is `www.europacorp.htb` and the other one 
 `admin-portal.europacorp.htb` admin portal is the most valuable so i will add it to `/etc/hosts`
 
 after going to **`https://admin-portal.europacorp.htb/`** it will show us login page 
-![[Pasted image 20251008121818.png]]
+![[Pasted image 20251008121818 1.png]]
 
 here after try some sqli payloads , i found i can login without need the password but i dont have the email and i need to found it 
 i found this email **`admin@europacorp.htb`**
 how?
 
-![[Pasted image 20251008122350.png]]
+![[Pasted image 20251008122350 1.png]]
 click on lock then press `connection` 
 then click on `more information`
 then `view certificate`
@@ -139,7 +139,7 @@ to login i use burp to intercept the login request and i change the `POST` data 
 **`email=admin%40europacorp.htb'-- -&password=ddddwoowo`**  
 now i'm in
 i was in dashboard after crawling i found this `https://admin-portal.europacorp.htb/tools.php` that could let me in the machine 
-![[Pasted image 20251008123253.png]]
+![[Pasted image 20251008123253 1.png]]
 write anything and intercept it by burp and the request will look like this : (after decode it)
 ```python
 POST /tools.php HTTP/1.1
