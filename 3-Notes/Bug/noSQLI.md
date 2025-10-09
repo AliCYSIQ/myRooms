@@ -43,3 +43,13 @@ now lets see if  can inject boolean or no and to do that we will send two reques
 check for different in response or behave 
 
 ----
+###### Overriding existing conditions
+you can attempt to override existing conditions to exploit the vulnerability. For example, you can inject a JavaScript condition that always evaluates to true, such as `'||'1'=='1`:
+
+`https://insecure-website.com/product/lookup?category=fizzy%27%7c%7c%27%31%27%3d%3d%27%31`
+
+This results in the following MongoDB query:
+
+`this.category == 'fizzy'||'1'=='1'`
+
+As the injected condition is always true, the modified query returns all items. This enables you to view all the products in any category, including hidden or unknown categories.
