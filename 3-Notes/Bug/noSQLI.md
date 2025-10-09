@@ -63,3 +63,4 @@ then this payload `'||1||'` and it show all the product even the unreleased ones
 (make sure to URL-encode all of these payloads before using)
 
 ----
+using null byte to ignores 
