@@ -86,3 +86,7 @@ For URL-based inputs, you can insert query operators via URL parameters. For exa
 2. Change the `Content-Type` header to `application/json`.
 3. Add JSON to the message body.
 4. Inject query operators in the JSON.
+
+To target an account, you can construct a payload that includes a known username, or a username that you've guessed. For example:
+
+`{"username":{"$in":["admin","administrator","superadmin"]},"password":{"$ne":""}}`
