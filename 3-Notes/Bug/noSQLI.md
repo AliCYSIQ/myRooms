@@ -63,4 +63,16 @@ then this payload `'||1||'` and it show all the product even the unreleased ones
 (make sure to URL-encode all of these payloads before using)
 
 ----
-using null byte to ignores 
+using null byte **`%00`** or **`\u0000`** to ignores the rest of the code (that come after the null byte)  
+
+---
+#### NoSQL operator injection
+
+NoSQL databases often use query operators, which provide ways to specify conditions that data must meet to be included in the query result. Examples of MongoDB query operators include:
+
+- `$where` - Matches documents that satisfy a JavaScript expression.
+- `$ne` - Matches all values that are not equal to a specified value.
+- `$in` - Matches all of the values specified in an array.
+- `$regex` - Selects documents where values match a specified regular expression.
+
+You may be able to inject query operators to manipulate NoSQL queries. To do this, systematically submit different operators into a range of user inputs, then review the responses for error messages or other changes.
