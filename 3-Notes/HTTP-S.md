@@ -21,3 +21,11 @@ Here is what each component stands for:
 | `Fragments`    | `#status`            | Fragments are processed by the browsers on the client-side to locate sections within the primary resource (e.g. a header or section on the page).                                     |
 
 Not all components are required to access a resource. The main mandatory fields are the scheme and the host, without which the request would have no resource to request.
+
+## HTTPS
+
+it stand for **Hypertext Transfer Protocol Secure**
+it's the same as **HTTP** BUT  this is more secure because it encrypt every request so no one will see the request in clear text but the user can
+ and here how it work 
+
+![[Pasted image 20251009232252.png]]
