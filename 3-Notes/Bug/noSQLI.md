@@ -24,11 +24,21 @@ In this example, we're injecting the fuzz string via the URL, so the string is U
 ```
 --------
 -----
-
+###### Determining which characters are processed
 then try to inject each char alone for exmaple if you submit this `'` 
 `this.category == '''`
 if it cause error , then try this
 `this.category == '\''`
 to escape the quote 
 if the error disappears then it vulnerable to injection attack  
+
+---
+###### Confirming conditional behavior
+now lets see if  can inject boolean or no and to do that we will send two request one true and the other one is false and see if it response differently For example you could use the conditional statements **`' && 0 && 'x`** and **`' && 1 && 'x`** as follows:
+
+**`https://insecure-website.com/product/lookup?category=fizzy'+%26%26+0+%26%26+'x`**
+
+**`https://insecure-website.com/product/lookup?category=fizzy'+%26%26+1+%26%26+'x`**
+
+check for different in response 
 
