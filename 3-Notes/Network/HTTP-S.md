@@ -2,7 +2,9 @@
 
 source: [Web request on HTB](https://academy.hackthebox.com/module/35/section/219), 
 
-HTTP stand for **`HyperText Transfer Protocol`** , The term **`hypertext`** stands for text containing links to other resources and text that the readers can easily interpret.
+## HTTP
+HTTP stand for **HyperText Transfer Protocol `PORT 80`** 
+ The term **`hypertext`** stands for text containing links to other resources and text that the readers can easily interpret.
 
  ## URL
 
@@ -24,8 +26,22 @@ Not all components are required to access a resource. The main mandatory fields 
 
 ## HTTPS
 
-it stand for **Hypertext Transfer Protocol Secure**
+it stand for **Hypertext Transfer Protocol Secure on `PORT 443`** 
 it's the same as **HTTP** BUT  this is more secure because it encrypt every request so no one will see the request in clear text but the user can
  and here how it work 
 
 ![[Pasted image 20251009232252.png]]
+and almost that the main different between HTTP and HTTPS 
+
+## same for both (almost)
+
+### Headers
+
+can be set them as 5 category:
+1. **`General Headers`**
+2. **`Entity Headers`**
+3. **`Request Headers`**
+4. **`Response Headers`**
+5. **`Security Headers`**
+
+#### General Headers
