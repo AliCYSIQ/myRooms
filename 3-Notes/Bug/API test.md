@@ -47,4 +47,15 @@ testing **different type** of content may enable:
 3. be more vulnerable to different type of content 
 to change content types , change the`Content-Type` header then reformat the request body accordingly. You can use the [Content type converter](https://portswigger.net/bappstore/db57ecbe2cb7446292a94aa6181c9278) BApp to automatically convert data
 
+##### lab
+found that product use API to know the price of every product 
+`GET /api/products/1/price`
+i only change it to `PATCH`
+and add this 
+```json
+{
+	"price":0
+}
 
+```
+now it free for everyone. using another HTTP method  
