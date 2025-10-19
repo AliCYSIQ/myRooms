@@ -65,6 +65,7 @@ like crawl tools , bruut force and
 
 ## OWASP TOP 10 API Vuln
 
-### Broken Object Level Authorization
+### Broken Object Level Authorization(BOLA)
+
 
 
