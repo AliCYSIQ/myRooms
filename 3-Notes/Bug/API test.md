@@ -40,3 +40,9 @@ use `OPTIONS` to know what the methods that are accepted
 use **`GET`** To get secret info or  **`POST`** to create one and **`DELETE`** to delete one (don't use delete at all for safety)
 
 #### Identifying supported content types
+
+testing **different type** of content may enable:
+1. Errors that show information
+2. Bypass defenses
+3. be more vulnerable to different type of content 
+
