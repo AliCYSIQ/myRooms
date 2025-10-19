@@ -63,3 +63,8 @@ now it free for everyone. using another HTTP method
 #### Using tools to find hidden endpoints
 like crawl tools , bruut force and 
 
+## OWASP TOP 10 API Vuln
+
+### Broken Object Level Authorization
+
+
