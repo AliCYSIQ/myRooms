@@ -45,4 +45,6 @@ testing **different type** of content may enable:
 1. Errors that show information
 2. Bypass defenses
 3. be more vulnerable to different type of content 
-to change content types , change the`Content-Type` header
+to change content types , change the`Content-Type` header then reformat the request body accordingly. You can use the [Content type converter](https://portswigger.net/bappstore/db57ecbe2cb7446292a94aa6181c9278) BApp to automatically convert data
+
+
