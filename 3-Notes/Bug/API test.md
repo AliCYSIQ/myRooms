@@ -67,5 +67,19 @@ like crawl tools , bruut force and
 
 ### Broken Object Level Authorization(BOLA)
 
+it's completely like [[IDOR]] bug , 
 
+for example :
+```
+/api/v1/suppliers/quarterly-reports/1
+```
+
+change it to :
+```
+/api/v1/suppliers/quarterly-reports/'i'
+```
+
+**i : any number** and it would retrieve sensitive info 
+
+### Broken Authentication
 
