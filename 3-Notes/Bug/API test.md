@@ -45,4 +45,4 @@ testing **different type** of content may enable:
 1. Errors that show information
 2. Bypass defenses
 3. be more vulnerable to different type of content 
-
+to change content types , change the`Content-Type` header
