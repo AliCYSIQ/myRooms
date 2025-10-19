@@ -59,3 +59,5 @@ and add this
 
 ```
 now it free for everyone. using another HTTP method  
+
+#### Using Intruder to find hidden endpoints
