@@ -60,4 +60,6 @@ and add this
 ```
 now it free for everyone. using another HTTP method  
 
-#### Using Intruder to find hidden endpoints
+#### Using tools to find hidden endpoints
+like crawl tools , bruut force and 
+
