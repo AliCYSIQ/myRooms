@@ -91,3 +91,13 @@ the same but on **`OTP`**
 **in general search for any thing that could help you get unauthorized access to account**
 
 ###  Broken Object Property Level Authorization
+it bug that let users access more info than they should/need, for example:
+
+imagine there's marketplace which have customers and suppliers and they take **1$** fee.
+
+if the customers were able to access info about suppliers more than they need it will be problem because:
+1. direct access to suppliers so the customers get **discount** and and suppliers **avoid the fee**
+2. could use their info to get access to their account using **brute-force** for example 
+3.  etc...
+
+### Improperly Controlled Modification of Dynamically-Determined Object Attributes
