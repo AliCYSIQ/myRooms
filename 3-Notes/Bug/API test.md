@@ -101,3 +101,25 @@ if the customers were able to access info about suppliers more than they need it
 3.  etc...
 
 ### Improperly Controlled Modification of Dynamically-Determined Object Attributes
+
+change the request body lead to change in the response, for example :
+
+```json
+...
+{
+	"isAadmin":0
+}
+
+```
+here `0` mean `false` , so change it to `1`
+will let you be admin
+other examples:
+```
+{
+	"price":25 
+
+}
+```
+change it to `0` will let you get the product for free 
+
+### Unrestricted Resource Consumption
