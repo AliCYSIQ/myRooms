@@ -82,4 +82,12 @@ change it to :
 **i : any number** and it would retrieve sensitive info 
 
 ### Broken Authentication
+it like [[authentication]] 
 
+it about search for **brute force with out limit** on password, searching for sensitive info that could be found on the website 
+
+the same but on **`OTP`**  
+
+**in general search for any thing that could help you get unauthorized access to account**
+
+###  Broken Object Property Level Authorization
