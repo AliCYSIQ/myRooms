@@ -149,8 +149,11 @@ with little bit of different
 able to use the server it self to get access to files (not the only thing that **`SSRF`** can do , check **[[SSRF]]**)
 
 for example :
-user able to create product and can upload picture to this product and in able update the photo by URI to the photo , in normal `file:///root/pic/product1.png`
-here you can update it and make it like this `file:///etc/passwd` or any file the server can access
+user able to create product and can upload picture to this product and in able update the photo by **`URI`** to the photo , in normal **`file:///root/pic/product1.png`**
+here you can update it and make it like this **`file:///etc/passwd`** or any file the server can access
 
 ### Security Misconfiguration
 
+any Misconfiguration that can lead vulnerability ,accepts user-controlled input and incorporates it into SQL queries without proper validation, thereby allowing Injection attacks .
+ for example :
+#### Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') 
