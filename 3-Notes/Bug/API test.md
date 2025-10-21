@@ -146,6 +146,11 @@ it's is the same as  `BFLA`
 with little bit of different 
 ### Server-Side Request Forgery
 
+able to use the server it self to get access to files (not the only thing that **`SSRF`** can do , check **[[SSRF]]**)
 
+for example :
+user able to create product and can upload picture to this product and in able update the photo by URI to the photo , in normal `file:///root/pic/product1.png`
+here you can update it and make it like this `file:///etc/passwd` or any file the server can access
 
+### Security Misconfiguration
 
