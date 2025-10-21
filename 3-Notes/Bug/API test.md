@@ -142,7 +142,9 @@ for example :
 admin can get billing address for all customers , if any unprivileged was able to get it too in any way , it will be **`BFLA`** 
 
 ### Unrestricted Access to Sensitive Business Flows
+it's is the same as  `BFLA` 
 
+### 
 
 
 
