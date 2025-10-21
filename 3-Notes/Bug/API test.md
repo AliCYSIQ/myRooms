@@ -167,4 +167,11 @@ the user able to access old version ,deleted information , old endpoint , etc
 for example :
 could have access to old version and this version have some bugs , or info that shouldn't be access by users
 
-###
+### lab 
+here it give you access to account that could list all the suppliers , in login you can rest password of any supplier by answer the question that the supplier made , because of information disclose , when list all the suppliers , you can know the question and almost every info you need .
+
+i found 5 suppliers that use **`what is your favorite  color`** , so using `ffuf` i was able to brute force every one with list of color until i get the answer for one of them and **i rest its password**
+here i was able to get access to his account
+
+now i'm supplier , every supplier could upload its CV and patch it's information , when you patch your info , you could change the CV by using **`URI`** which let me write this **`file:///flag.txt`**
+now it solve 
