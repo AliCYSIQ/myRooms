@@ -123,3 +123,21 @@ other examples:
 change it to `0` will let you get the product for free 
 
 ### Unrestricted Resource Consumption
+this bug let you use **`RAM`, `STORAGE`, `CPU USING`, `NETWORK BANDWIDTH`**
+which will cause cost loose to the company
+
+let you upload files without limit to **how much size and how many times** you will upload
+and that's will let you use all the storage in the server
+
+able to send `sms OTP` or `email OTP` which will cause two things , high use of network bandwidth and annoying users
+
+and this can apply on anything that don't have restrict on resource 
+
+### Broken Function Level Authorization(BFLA)
+if unauthorized or unprivileged can interact to privileged endpoint, able to run privileged function or information
+
+The difference between `BOLA` and `BFLA` is that, in the case of `BOLA`, the user is authorized to interact with the vulnerable endpoint, whereas in the case of `BFLA`, the user is not.
+
+
+
+
