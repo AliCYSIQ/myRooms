@@ -157,3 +157,14 @@ here you can update it and make it like this **`file:///etc/passwd`** or any fil
 any Misconfiguration that can lead vulnerability ,accepts user-controlled input and incorporates it into SQL queries without proper validation, thereby allowing Injection attacks .
  for example :
 #### Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') 
+
+[[SQLI]]
+
+### Improper Inventory Management
+
+the user able to access old version ,deleted information , old endpoint , etc
+
+for example :
+could have access to old version and this version have some bugs , or info that shouldn't be access by users
+
+###
