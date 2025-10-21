@@ -138,6 +138,12 @@ if unauthorized or unprivileged can interact to privileged endpoint, able to run
 
 The difference between `BOLA` and `BFLA` is that, in the case of `BOLA`, the user is authorized to interact with the vulnerable endpoint, whereas in the case of `BFLA`, the user is not.
 
+for example :
+admin can get billing address for all customers , if any unprivileged was able to get it too in any way , it will be **`BFLA`** 
+
+### Unrestricted Access to Sensitive Business Flows
+
+
 
 
 
