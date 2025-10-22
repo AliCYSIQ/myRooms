@@ -1,2 +1,3 @@
 [[Bug]]
 
+## Finding GraphQL endpoints
