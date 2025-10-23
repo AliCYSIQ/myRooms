@@ -27,3 +27,69 @@ If you can't find the `GraphQL` endpoint by sending POST requests to common endp
 
 ## Exploiting unsanitized arguments
 
+For example, the query below requests a product list for an online shop:
+
+```
+#Example product query
+query { 
+	products { 
+		id 
+		name 
+		listed 
+	} 
+}
+```
+
+The product list returned contains only listed products.
+
+```
+#Example product response 
+{ 
+	"data": { 
+		"products": [ 
+			{ 
+				"id": 1,
+				 "name": "Product 1", 
+				 "listed": true
+			}, 
+			{ 
+				"id": 2, 
+				"name": "Product 2", 
+				"listed": true 
+			}, 
+			{ 
+				"id": 4, 
+				"name": "Product 4", 
+				"listed": true 
+			} 
+		] 
+	} 
+}
+```
+
+From this information, we can infer the following:
+
+- Products are assigned a sequential ID.
+- Product ID 3 is missing from the list, possibly because it has been delisted.
+
+```
+#Query to get missing product 
+	query { 
+		product(id: 3) { 
+			id 
+			name
+			listed
+		} 
+	}
+```
+
+this will let you get unlisted product
+
+## Discovering schema information
+
+using build-in `GraphQL` function to get information about schema like Introspection
+
+### Using introspection
+
+Introspection helps you to understand how you can interact with a GraphQL API. It can also disclose potentially sensitive data, such as description fields.
+
