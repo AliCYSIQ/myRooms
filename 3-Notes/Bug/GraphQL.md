@@ -99,4 +99,16 @@ you can let return only the available fields names
 
 ### Probing for introspection
 
+they can enable introspection or disable it ,
+ if it was enable :
+```
+#Introspection probe request 
+{ 
+	"query": "{__schema{queryType{name}}}" 
+}
+```
+
+the response returns the names of all available queries.
+
+### Running a full introspection query
 
