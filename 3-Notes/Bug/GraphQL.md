@@ -222,9 +222,22 @@ Suggestions are a feature of the Apollo GraphQL platform in which the server can
 ### lab
 after i'm in the website , i found this in the burp history `/graphql/v1` which mean this website have `graphql`, send it to the repeater and check if introspection is enabled or no
 
-after i send the query , it was enable , after see the result i found this `postpassword` .
+after i send the query , it was enable , after see the result **i found this `postpassword` .**
 
 before anything i found this website **have 5 blog post but the one with `id =3` is not visible** 
 
-after send `graphql/v1` to the repeater and change the variable from `e.g. 5 to 3` and add `postpassword` to query panel , here you will get  the post password
+after send `graphql/v1` to the repeater and change **the variable from `e.g. 5 to 3` and add `postpassword` to query panel** , here you will get  the post password
+
+### lab
+after i'm in the website , found this in the burp history `/graphql/v1` which mean this website have `graphql`, send it to the repeater and check if introspection is enabled or no
+
+after i send the query , it was enable , `right click --> graphql --> save to site map`
+after checking site map , you will find some query one of them `getUser` 
+
+sending it to repeater and you will `id` if change it to `1` it will retrieve the username and the password of administrator 
+
+sigh in , the lab is solved now
+
+## Bypassing GraphQL introspection defenses
+
 
