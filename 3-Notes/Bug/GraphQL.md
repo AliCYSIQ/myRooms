@@ -93,3 +93,4 @@ using build-in `GraphQL` function to get information about schema like Introspec
 
 Introspection helps you to understand how you can interact with a GraphQL API. It can also disclose potentially sensitive data, such as description fields.
 
+
