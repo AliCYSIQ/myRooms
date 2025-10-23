@@ -317,3 +317,6 @@ valid
 
 }
 ```
+### lab bypassing rate limit to login
+
+the login page is powered by `graphql`
