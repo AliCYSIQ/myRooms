@@ -284,7 +284,15 @@ which will let you delete any user by only its id
 
 ## Bypassing rate limiting using aliases
 
+some times websites put brute force defense but they put it on how many **HTTP  request you made not how many operation you do** .
 
+ in this case you can perform more than one operation in one request ,
+Ordinarily, GraphQL objects can't contain multiple properties with the same name. 
+
+Aliases enable you to bypass this restriction by explicitly naming the properties you want the API to return.
+**This operation could potentially bypass rate limiting as it is a single HTTP request** 
+
+```
 #Request with aliased queries
 
 query isValidDiscount($code: Int) {
@@ -308,3 +316,4 @@ valid
 }
 
 }
+```
