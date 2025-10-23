@@ -242,4 +242,8 @@ sigh in , the lab is solved now
 
 this defenses use to block using introspection , to bypassing it , try:
 
+instead of `__schema{` write `__schema/n{` , try add space , keep changing until it work
+
+if it do not work , try to change the **HTTP method** that used, e..g. change it from `POST` to `GET`,
+also try to change the content type from  **`application/json`** to  **`application/www-form-urlencoded`** 
 
