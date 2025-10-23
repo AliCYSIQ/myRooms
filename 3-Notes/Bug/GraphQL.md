@@ -214,3 +214,7 @@ This is an online tool that takes the results of an introspection query and prod
 
 ### if introspection was disabled
 here there's some ways to get information even if it it disabled
+
+Suggestions are a feature of the Apollo GraphQL platform in which the server can suggest query amendments in error messages. These are generally used where a query is slightly incorrect but still recognizable (for example, `There is no entry for 'productInfo'. Did you mean 'productInformation' instead?`).
+
+[Clairvoyance](https://github.com/nikitastupin/clairvoyance) is a tool that uses suggestions to automatically recover all or part of a GraphQL schema, even when introspection is disabled.
