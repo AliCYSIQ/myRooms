@@ -224,4 +224,7 @@ after i'm in the website , i found this in the burp history `/graphql/v1` which 
 
 after i send the query , it was enable , after see the result i found this `postpassword` .
 
-before anything i found this website **have 5 blog post but the one with `id =3` is not visible**  
+before anything i found this website **have 5 blog post but the one with `id =3` is not visible** 
+
+after send `graphql/v1` to the repeater and change the variable from `e.g. 5 to 3` and add `postpassword` to query panel , here you will get  the post password
+
