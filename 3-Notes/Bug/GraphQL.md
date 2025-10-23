@@ -219,3 +219,9 @@ Suggestions are a feature of the Apollo GraphQL platform in which the server can
 
 [Clairvoyance](https://github.com/nikitastupin/clairvoyance) is a tool that uses suggestions to automatically recover all or part of a GraphQL schema, even when introspection is disabled.
 
+### lab
+after i'm in the website , i found this in the burp history `/graphql/v1` which mean this website have `graphql`, send it to the repeater and check if introspection is enabled or no
+
+after i send the query , it was enable , after see the result i found this `postpassword` .
+
+before anything i found this website **have 5 blog post but the one with `id =3` is not visible**  
