@@ -238,6 +238,8 @@ sending it to repeater and you will `id` if change it to `1` it will retrieve th
 
 sigh in , the lab is solved now
 
-## Bypassing GraphQL introspection defenses
+## Bypassing `GraphQL` introspection defenses
+
+this defenses use to block using introspection , to bypassing it , try:
 
 
