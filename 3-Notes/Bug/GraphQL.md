@@ -133,7 +133,7 @@ the response:
 }
 ```
 here we knew that it have SQL injection 
-
+from **introspection** we knew that `UserObject` have 6 columns  so we will use **`SQL UNION`** 
 ## Discovering schema information(introspection)
 
 using build-in `GraphQL` function to get information about schema like Introspection
