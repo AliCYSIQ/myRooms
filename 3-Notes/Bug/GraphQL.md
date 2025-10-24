@@ -31,6 +31,7 @@ you can use tools such as:
 1. [graphw00f](https://github.com/dolevf/graphw00f) it will search for the endpoint and see what the engine `graphQL` run  
 ## Exploiting uninitialized arguments
 ### Insecure Direct Object Reference (IDOR)
+
 For example, the query below requests a product list for an online shop:
 
 ```
@@ -90,6 +91,48 @@ From this information, we can infer the following:
 this will let you get unlisted product
 
 this could happen to `users` too by changing the name or the id to get access to information about another user 
+### Injection Attacks
+
+#### SQL Injection
+
+`graphQL` could be vulnerable to SQL injection for example if there were query like this :
+
+```
+query {
+  user(username: "admin") {
+    id
+    msg
+  }
+}
+```
+it will get the `id` and the `message` that related to  `admin`
+if we change `"admin"` to `"admin'-- -"` it will get the same response ,
+
+ if we made it like this `"admin'"`
+
+the response:
+```
+{
+  "errors": [
+    {
+      "message": "(pymysql.err.ProgrammingError) (1064, \"You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''admin'' \\n LIMIT 1' at line 3\")\n[SQL: SELECT user.uuid AS user_uuid, user.id AS user_id, user.username AS user_username, user.password AS user_password, user.role AS user_role, user.msg AS user_msg \nFROM user \nWHERE username='admin'' \n LIMIT %(param_1)s]\n[parameters: {'param_1': 1}]\n(Background on this error at: https://sqlalche.me/e/20/f405)",
+      "locations": [
+        {
+          "line": 2,
+          "column": 3
+        }
+      ],
+      "path": [
+        "user"
+      ]
+    }
+  ],
+  "data": {
+    "user": null
+  }
+}
+```
+here we knew that it have SQL injection 
 
 ## Discovering schema information(introspection)
 
