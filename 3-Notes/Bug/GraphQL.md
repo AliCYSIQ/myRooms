@@ -18,14 +18,14 @@ a way to know if it `graphql` or not
 add `v1` if any of these didn't catch it
 
 >**NOTE**
->`GraphQL` services will often respond to any `non-GraphQL` request with a "query not present" or similar error.
+>`GraphQL` services will often respond to any `non-GraphQL` request with a **"query not present"** or similar error.
 
 ### Request methods
 Most `GraphQL` accepts `POST` method but trying `GET` or chaining content type that could have some vulnerability
 
 If you can't find the `GraphQL` endpoint by sending POST requests to common endpoints, try resending the universal query using alternative HTTP methods.
 
-## Exploiting unsanitized arguments
+## Exploiting uninitialized arguments
 
 For example, the query below requests a product list for an online shop:
 
