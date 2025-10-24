@@ -216,6 +216,8 @@ fragment TypeRef on __Type {
 You can view relationships between schema entities more easily using a [GraphQL visualizer](http://nathanrandal.com/graphql-visualizer/).
 This is an online tool that takes the results of an introspection query and produces a visual representation of the returned data, including the relationships between operations and types.
 
+for even better and local one , you can use this tool [graphql-voyager](https://github.com/APIs-guru/graphql-voyager) (the recommended one) and here the [online version of it](https://apis.guru/graphql-voyager/)
+
 ### if introspection was disabled
 here there's some ways to get information even if it it disabled
 
