@@ -142,7 +142,16 @@ As the GraphQL query only returns the first row, we will use the [GROUP_CONCAT](
   }  
 }
 ```
-
+the response :
+```
+{
+  "data": {
+    "user": {
+      "username": "secret,user,flag,post"
+    }
+  }
+}
+```
 ## Discovering schema information(introspection)
 
 using build-in `GraphQL` function to get information about schema like Introspection
