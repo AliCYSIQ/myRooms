@@ -25,6 +25,10 @@ Most `GraphQL` accepts `POST` method but trying `GET` or chaining content type t
 
 If you can't find the `GraphQL` endpoint by sending POST requests to common endpoints, try resending the universal query using alternative HTTP methods.
 
+### Tools to finding `GraphQL`
+
+you can use tools such as:
+1. [graphw00f](https://github.com/dolevf/graphw00f) it will search for the endpoint and see what the engine `graphQL` run  
 ## Exploiting uninitialized arguments
 
 For example, the query below requests a product list for an online shop:
@@ -85,7 +89,7 @@ From this information, we can infer the following:
 
 this will let you get unlisted product
 
-## Discovering schema information
+## Discovering schema information(introspection)
 
 using build-in `GraphQL` function to get information about schema like Introspection
 
