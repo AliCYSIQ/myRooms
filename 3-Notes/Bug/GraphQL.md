@@ -89,6 +89,8 @@ From this information, we can infer the following:
 
 this will let you get unlisted product
 
+this could happen to `users` too by changing the name or the id to get access to information about another user 
+
 ## Discovering schema information(introspection)
 
 using build-in `GraphQL` function to get information about schema like Introspection
