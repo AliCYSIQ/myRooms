@@ -30,7 +30,7 @@ If you can't find the `GraphQL` endpoint by sending POST requests to common endp
 you can use tools such as:
 1. [graphw00f](https://github.com/dolevf/graphw00f) it will search for the endpoint and see what the engine `graphQL` run  
 ## Exploiting uninitialized arguments
-
+### Insecure Direct Object Reference (IDOR)
 For example, the query below requests a product list for an online shop:
 
 ```
