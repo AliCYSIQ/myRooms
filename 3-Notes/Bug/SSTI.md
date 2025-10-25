@@ -11,5 +11,9 @@ to create a successful attack, you need to follow these setups :
 
 ### Detect
 
-it's not easy to detect the bug , to find the bug ,try fuzzing by injecting a sequence of special characters commonly used in template expressions, such as **`${{<%[%'"}}%\`** If an exception is raised, This is one sign that a vulnerability to server-side template injection may exist.
+ try fuzzing by injecting a sequence of special characters commonly used in template expressions, such as **`${{<%[%'"}}%\`** If an exception is raised, This is one sign that a vulnerability to **`SSTI`** may exist.
+
+**`SSTI`** occur in two distinct contexts, each of which requires its own detection method.
+
+if fuzzing was inconclusive, a vulnerability may still reveal itself using one of these approaches. Even if fuzzing did suggest a template injection vulnerability, you still need to identify its context in order to exploit it.
 
