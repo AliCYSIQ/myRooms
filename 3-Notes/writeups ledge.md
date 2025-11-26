@@ -1,6 +1,6 @@
-## WRITEUP 
+# WRITEUP 
 
-### LEDGER — DAY 1
+## LEDGER — DAY 1
 
 1. Advanced Bug Bounty Recon: A Methodology That Uncovers Hidden Vulnerabilities
     
@@ -25,28 +25,31 @@
 11. I Studied 100+ SSRF Reports — Here’s What I Learned
     
 12. $100–$1000 Subdomain Takeover — Methodology
-### LEDGER — DAY 2
 
-1. Chaining IDOR + Business Logic to Take Over User Accounts
+
+## LEDGER — DAY 2 (updated)
+
+1. How I Hijacked 100+ Accounts with Just a URL Change (IDOR → XSS chain). 
     
-2. From Reflected XSS to Full Account Hijack via OAuth Misconfiguration
+2. OAuth Misconfiguration Lead To 1-Click Account Takeover (ATO).
     
-3. How I Found a Critical GraphQL Authorization Bypass
+3. $600 Simple MFA Bypass — GraphQL (auth/authorization bypass
     
-4. Exploiting File Upload Filter Bypass Using Polyglot Files
+4. Day 23: The Polyglot Poison — Resume Upload → Remote Shell (file upload).
     
-5. Blind SQL Injection Through Forgotten Parameter
+5. Blind SQL Injection in APIs and Real-World Scenario.
     
-6. Race Condition That Allowed Unlimited Coupon Abuse
+6. Top Vulnerabilities — Race Condition Examples (coupon/gift card abuse). 
     
-7. JWT Misconfiguration Leading to Privilege Escalation
+7. How I Exploited a JWT Misconfiguration for Account Takeover & Admin Access.
     
-8. Business Logic Flaw: Purchasing Paid Features for Free
+8. Business Logic Flaw — Bypass Payment / Get Paid Features for Free.
+9. Misconfigured Reset Password → Account Takeover (token leakage/poisoning). 
     
-9. Account Takeover via Password Reset Token Leakage
+10. From Simple File Import to Full Server Exposure — SSRF. 
     
-10. SSRF via File Import Feature in Web App
+11. CORS Misconfiguration — The Silent Gateway to Cross-Origin Data Leaks. 
     
-11. CORS Misconfiguration Leading to Data Theft
-    
-12. Exposed API Endpoint Dumping Internal User Data
+12. Unrestricted API Endpoint → Dumping All User Data (exposed API).
+
+---
