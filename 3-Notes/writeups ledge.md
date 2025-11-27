@@ -53,3 +53,16 @@
 12. Unrestricted API Endpoint → Dumping All User Data (exposed API).
 
 ---
+day 3
+## LEDGER — Extended
+
+13. How I Uncovered IDOR, XSS, and Full Account Takeover in a Single Hunt  
+14. Insecure Direct Object References (IDOR) Hands-on Lab (Medium)  
+15. SQL Injection and IDOR explained + 8 interview questions (MeetCyber, Oct 2025)  
+16. Injection Vulnerabilities – Detailed overview (OWASP / Web App Security guide)  
+17. What is IDOR Vulnerability? — Real examples from banking apps (WebAsha blog, 2025)  
+18. Web App Security breakdown: XSS / Injection / Access Control (security guide)  
+19. GitHub “bug-bounty-writeups” repository — curated public writeup list  
+20. SagarSajeev blog — mixed XSS, IDOR, file-upload, logic bug writeups  
+21. “IDOR – a modern age SQLi” article (enciphers.com) — conceptual view on auth flaws  
+22. Writeup-DB site — assorted real bug bounty writeups (SQLi, IDOR, Auth bypass etc.)
