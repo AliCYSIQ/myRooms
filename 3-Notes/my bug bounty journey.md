@@ -1,1 +1,1 @@
-first let look for [[IDOR]] [[XSS]] [[SQLI]] information disclose , simple account takeover like password rest , simple MFA , simple Oath Misconfiguration  , and the most thing i want to master is understanding how the app work , so this will be my focus in first hours or days  
+first let look for [[IDOR]] [[XSS]] [[SQLI]] (any easy injection)information disclose , simple account takeover like password rest , simple MFA , simple Oath Misconfiguration  , and the most thing i want to master is understanding how the app work , so this will be my focus in first hours or days  
