@@ -66,3 +66,28 @@ day 3
 20. SagarSajeev blog — mixed XSS, IDOR, file-upload, logic bug writeups  
 21. “IDOR – a modern age SQLi” article (enciphers.com) — conceptual view on auth flaws  
 22. Writeup-DB site — assorted real bug bounty writeups (SQLi, IDOR, Auth bypass etc.)
+# WRITEUP LEDGER — DAY 3 (what I gave you now)
+
+1. CVE-2025-63416 — Stored XSS → Privilege Escalation (SelfBest chat) — Rohit (Nov 2, 2025.)
+    
+2. Reflected XSS in Citrix NetScaler (RelayState SSO) — SecPod (Nov 13, 2025). 
+    
+3. IBM Lakehouse (watsonx.data) — Stored XSS (CVE-2025-36139) — IBM security bulletin (Sep 18, 2025). [IBM](https://www.ibm.com/support/pages/node/7245387?utm_source=chatgpt.com)
+    
+4. Business logic: bypassing payment / unlimited discount — Spacelift case (Oct 9, 2025). [InfoSec Write-ups](https://infosecwriteups.com/business-logic-error-bypassing-payment-with-test-cards-77c6e3c36f16?utm_source=chatgpt.com)
+    
+5. JWT misconfiguration → account takeover / admin access — InfosecWriteups (Aug/Sep 2025). [InfoSec Write-ups](https://infosecwriteups.com/how-i-exploited-a-jwt-misconfiguration-for-account-takeover-and-admin-access-in-5-minutes-c2974899f4ec?utm_source=chatgpt.com)
+    
+6. OAuth misconfiguration pre-ATO examples — public HackerOne reports. [HackerOne](https://hackerone.com/reports/1074047?utm_source=chatgpt.com)
+    
+7. SSRF → internal metadata / high-impact chain — medium-style bounty writeup. [Medium](https://medium.com/%40theindiannetwork/how-i-exploited-an-ssrf-vulnerability-earned-5000-real-world-exploit-e8ded56ef9ce?utm_source=chatgpt.com)
+    
+8. Race condition / coupon abuse → infinite discount — InfosecWriteups / Medium case. [InfoSec Write-ups](https://infosecwriteups.com/bug-bounty-race-exploiting-race-conditions-for-infinite-discounts-a2cb2f233804?utm_source=chatgpt.com)
+    
+9. IDOR real-world bounty case study (exfil / takeover) — Medium / HackerOne style writeup. [Medium](https://medium.com/%40beingnile/day-39-idor-report-7f0b3e82a7d5?utm_source=chatgpt.com)
+    
+10. File upload → RCE / web shell chain (real researcher writeup). [Medium](https://medium.com/%40akashoffsec/how-i-found-rce-remote-code-execution-via-file-upload-7541816e5fc4?utm_source=chatgpt.com)
+    
+11. Blind XSS / OOB bounty examples (HackerOne public reports). [HackerOne](https://hackerone.com/reports/1091118?utm_source=chatgpt.com)
+    
+12. XSS/CSP cheat sheet + CSP bypass examples (PortSwigger / up-to-date vectors) — useful companion reading. [PortSwigger](https://portswigger.net/web-security/cross-site-scripting/cheat-sheet?utm_source=chatgpt.com)
