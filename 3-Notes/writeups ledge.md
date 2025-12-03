@@ -90,4 +90,27 @@ day 3
     
 11. Blind XSS / OOB bounty examples (HackerOne public reports). [HackerOne](https://hackerone.com/reports/1091118?utm_source=chatgpt.com)
     
-12. XSS/CSP cheat sheet + CSP bypass examples (PortSwigger / up-to-date vectors) — useful companion reading. [PortSwigger](https://portswigger.net/web-security/cross-site-scripting/cheat-sheet?utm_source=chatgpt.com)
+12. XSS/CSP cheat sheet + CSP bypass examples (PortSwigger / up-to-date vectors) — useful companion reading. 
+
+**Writeups added:**
+
+1. Mobile API IDOR → ATO
+    
+2. CSP misconfig → stored XSS
+    
+3. GraphQL introspection chain
+    
+4. Payment race-condition
+    
+5. ImageMagick SSRF
+    
+
+**HackerOne reports added:**  
+6. #241008 Shopify Stored XSS  
+7. #826361 GitLab SSRF  
+8. #1027822 Starbucks FIle Upload → RCE  
+9. #2054184 Null-byte upload → RCE  
+10. #228377 Discourse SSRF  
+11. #1074047 OAuth → ATO  
+12. #847210 Slack file exec  
+13. #875028 Uber parameter pollution auth bypass
