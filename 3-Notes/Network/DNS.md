@@ -1,7 +1,8 @@
 [[Network]]
 
-**DNS** (Domain Name System): translating human-readable domain names (like google.com) into numerical IP addresses that computers use to find each other online. It's essential for accessing websites, sending emails, and using other internet services. Without DNS, we'd have to remember complex IP addresses instead of simple domain names.
-and we can call it **DNS Resolution**.
+**DNS** (Domain Name System): translating human-readable domain names (like google.com) into numerical IP addresses that computers use to find each other online. It's essential for accessing websites, sending emails, and using other internet services. 
+
+Without DNS, we'd have to remember complex IP addresses instead of simple domain names.  and we can call it **DNS Resolution**.
 
 ### **How this work?**
 
