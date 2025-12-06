@@ -114,3 +114,48 @@ day 3
 11. #1074047 OAuth → ATO  
 12. #847210 Slack file exec  
 13. #875028 Uber parameter pollution auth bypass
+
+# **DAY 4 LEDGER (all new items, no repeats)**
+
+## **WRITEUPS**
+
+1. Telecom API IDOR → ATO
+    
+2. Password Reset Poisoning (Host-Header Injection)
+    
+3. Admin API Authorization Bypass
+    
+4. Markdown Stored XSS
+    
+5. SQLi in Forgot Password
+    
+6. GraphQL Auth Bypass
+    
+7. Unlimited Credits Logic Bug
+    
+8. ImageMagick SSRF
+    
+9. CSP Bypass → Stored XSS
+    
+10. OAuth Redirect Misconfiguration Token Theft
+    
+
+## **HackerOne Reports**
+
+11. #1801859 Stored XSS via SVG
+    
+12. #2171193 IDOR Contact List
+    
+13. #1885015 BAC → Invoice Access
+    
+14. #2095934 SQLi Analytics
+    
+15. #1965004 OAuth CSRF → ATO
+    
+16. #1764918 CORS Misconfig
+    
+17. #1991762 File Upload → SSRF
+    
+18. #1814455 Rate Limit Bypass
+    
+19. #2216035 Param Pollution → Priv Esc
