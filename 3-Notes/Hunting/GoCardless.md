@@ -1,5 +1,10 @@
 
-## things to test 
+## things to test
+make something like password change or email change and put [] in the old password and see if it will be bypassed 
+[source](https://hackerone.com/reports/792895)
+
+ask for password change and when it sent to the email (dont click on it )
+then change the email to a new one and  see if the 
 ## things might be helpful 
 ## bug
 ## maybe bug 
