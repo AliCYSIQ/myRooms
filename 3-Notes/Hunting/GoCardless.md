@@ -5,6 +5,8 @@ make something like password change or email change and put [] in the old passwo
 
 ask for password change and when it sent to the email (dont click on it )
 then change the email to a new one and  see if the 
+[source](https://hackerone.com/reports/8082?)
+
 ## things might be helpful 
 ## bug
 ## maybe bug 
