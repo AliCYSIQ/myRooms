@@ -13,4 +13,5 @@ then change the email to a new one and  see if the
 ### you can get Org info with only their id (uuid)
 	`GET /organisations/OR01KC412D8YQXWDSQFB0MH6SWSP`
 	`GET /creditor_details/CR01KC412DCMWKANZ6EK7AE10HXA`
+not bug , need auth to access even if you have the uuid 
 ## endpoint to test
