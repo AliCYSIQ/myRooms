@@ -15,3 +15,7 @@ then change the email to a new one and  see if the
 	`GET /creditor_details/CR01KC412DCMWKANZ6EK7AE10HXA`
 not bug , need auth to access even if you have the uuid 
 ## endpoint to test
+
+## endpoint already tested
+ `logo` already try to upload to get RCE and didnt work 
+ 
