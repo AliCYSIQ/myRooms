@@ -1,5 +1,0 @@
-
-## {{date}} day {{number}}
-
-
-
