@@ -9,4 +9,4 @@
 
 ## things to test (ideas)
 
-
+remove more than one project in one time and put one not yours 
