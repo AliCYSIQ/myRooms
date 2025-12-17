@@ -159,3 +159,49 @@ day 3
 18. #1814455 Rate Limit Bypass
     
 19. #2216035 Param Pollution → Priv Esc
+
+
+# WRITEUP LEDGER — DAY 5 (new items)
+
+## WRITEUPS
+
+1. Business Logic Bug to Bypass NO’s — org ownership/roles (parallel requests)
+    
+2. Payment Bypass via API Request to Activate Premium Plan (subscription activation)
+    
+3. How I Created a Private Project Without Paying (subscription validation)
+    
+4. How I bypassed subscription limits by a race condition (seat limits)
+    
+5. Extending Free Trials with Just a Clock Change (trial/state logic)
+    
+6. Full HD Playback Paywall Bypass via JSON Manipulation (state trust)
+    
+7. API Token Flaw Let Me Bypass Premium Restrictions (token lifecycle)
+    
+8. Invitation Function into a Revenue Blocker (invite/account state)
+    
+9. Breaking Business Logic via Coupons (discount logic)
+    
+10. Invitation System Logic Flaw → Account Takeover (invite workflow)
+    
+
+## HACKERONE REPORTS
+
+11. #1121896 Email verification bypass (Stripe)
+    
+12. #915110 Invitation confirmation email-check gap (Crowdsignal)
+    
+13. #915114 IDOR in editing users (Crowdsignal)
+    
+14. #538800 Invite flow email change → ATO (Khan Academy)
+    
+15. #790061 CSRF → invite attacker as admin (org takeover)
+    
+16. #272570 Privilege escalation to owner (org roles)
+    
+17. #1420697 Payment bypass (Lemlist)
+    
+18. #1071918 Shared-access role model issue (Streamlabs)
+    
+	1. #2571981 Business-logic 2FA bypass
